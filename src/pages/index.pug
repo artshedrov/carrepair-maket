@@ -1,13 +1,23 @@
 doctype html
 html
-    head
+    include head.pug
     body
         header
+            div.header__banner Красный блок
         nav
         ul
             li 1
             li 2
+            li 3
         h1  My test page
         p   Welcome my world
+        div.container Аквамарин
+    mixin section
+        section
+            div секция
+    +section
+    +section
+        h1 Хэдер
+
     script
-    footer
+    include footer.pug
