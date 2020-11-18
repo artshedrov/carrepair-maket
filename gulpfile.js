@@ -1,11 +1,3 @@
-// const gulp = require('gulp');
-// const serve = require('./gulp/tasks/serve');
-// const scripts = require('./gulp/tasks/scripts');
-// const style = require('./gulp/tasks/style');
-// const image = require('./gulp/tasks/image');
-// const html = require('./gulp/tasks/html')
-//
-// module.exports.start = gulp.series(html, style, scripts, image, serve);
 const gulp = require('gulp');
 const less = require('gulp-less');
 const concat = require('gulp-concat');
