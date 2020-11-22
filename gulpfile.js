@@ -10,9 +10,6 @@ const autoprefixer = require('autoprefixer');
 const clean = require('gulp-contrib-clean');
 const browser = require('browser-sync').create();
 const imageMin = require('gulp-imagemin');
-const html = require('gulp-posthtml');
-
-
 
 gulp.task('copy', async function () {
   await gulp.src([
@@ -34,7 +31,7 @@ gulp.task('clean', async function () {
 });
 
 gulp.task('miniCss', function () {
-  return gulp.src('build/css/*.css')
+  return gulp.src('src/css/*.css')
     .pipe(minify())
     .pipe(gulp.dest('build/css'));
 });

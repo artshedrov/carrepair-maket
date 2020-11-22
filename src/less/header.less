@@ -1,5 +1,10 @@
+.header-default() {
+  @bg-image: #D5D5D5;
+}
 .header {
-  background: url("../img/Heroshot3.png") center center no-repeat;
+  .header-default();
+
+  background: @bg-image center center no-repeat;
   background-size: cover;
   height: 813px;
   width: 100%;
