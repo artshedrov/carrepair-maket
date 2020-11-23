@@ -1,5 +1,8 @@
 .header-default() {
   @bg-image: #D5D5D5;
+  @fill-default: #4B4B4B;
+  @text-color-default: #fff;
+  @text-color-secondary-default: #000000;
 }
 .header {
   .header-default();
@@ -12,5 +15,42 @@
   &__title {
     color: white;
     font-size: 56px;
+  }
+}
+
+.utility {
+  .header-default();
+
+  &__hours {
+    &__img svg {
+      fill: @fill-default;
+    }
+  }
+
+  &__phone {
+    &__img svg {
+      fill: @fill-default;
+    }
+  }
+  &__text {
+    color: @text-color-default;
+  }
+}
+
+.navbar {
+  .header-default();
+  &__menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    a {
+      color: @text-color-secondary-default;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 }
