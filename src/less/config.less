@@ -1,12 +1,33 @@
+@glob-primary-text-color: #fff;
+@glob-secondary-text-color: #02133C;
+@glob-btn-color-normal: #C40B0B;
+@glob-fill-svg: #C40B0B;
+
+@glob-img-header: url("../img/Heroshot3.png");
+@glob-logo-header: url("../img/Logo-Placeholder-5.png");
+
+@glob-text-size-h1: 56px;
+@glob-text-size-h2: 42px;
+@glob-text-size-h3: 36px;
+@glob-text-size-h4: 30px;
+@glob-text-size-h5: 24px;
+@glob-text-size-h6: 19px;
+@glob-text-size-body: 16px;
+@glob-text-size-btn: 16px;
+
+
+
 .buttons() {
-  @color: #fff;
-  @background: #C40B0B;
+  @text-color: @glob-primary-text-color;
+  @bg-color: @glob-btn-color-normal;
+  @text-size: @glob-text-size-btn;
 }
 
 .header-default() {
-  @bg-image: url("../img/Heroshot3.png");
-  @logo-image: url("../img/Logo-Placeholder-5.png");
-  @fill-default: #C40B0B;
-  @text-color-default: #fff;
-  @text-color-secondary-default: #02133C;
+  @bg-header-image: @glob-img-header;
+  @logo-image: @glob-logo-header;
+  @fill-default: @glob-fill-svg;
+  @text-primary-color-default: @glob-primary-text-color;
+  @text-secondary-color-default: @glob-secondary-text-color;
+  @text-size-h1: @glob-text-size-h1;
 }
