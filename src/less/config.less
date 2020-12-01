@@ -1,11 +1,14 @@
 @glob-primary-text-color: #fff;
-@glob-secondary-text-color: #02133C;
+@glob-secondary-color: #02133C;
 @glob-btn-color-normal: #C40B0B;
 @glob-fill-svg: #C40B0B;
 @glob-color-neutral: #fff;
+@glob-body-color: #F5F5F5;
 
 @glob-img-header: url("../img/Heroshot3.png");
 @glob-logo-header: url("../img/Logo-Placeholder-5.png");
+@glob-about-bg: url("../img/about-image.png");
+@glob-video-bg: url("../img/video-bg.png");
 
 @glob-text-size-h1: 56px;
 @glob-text-size-h2: 42px;
@@ -18,22 +21,36 @@
 @glob-text-size-nav: 14px;
 @glob-text-size-cap: 12px;
 
-
+.body-default() {
+  @body-bg-color: @glob-body-color;
+}
 
 .buttons() {
   @text-color: @glob-primary-text-color;
   @bg-color: @glob-btn-color-normal;
   @text-size: @glob-text-size-btn;
-}
+} 
 
 .header-default() {
   @bg-header-image: @glob-img-header;
   @logo-image: @glob-logo-header;
   @fill-default: @glob-fill-svg;
   @text-primary-color-default: @glob-primary-text-color;
-  @text-secondary-color-default: @glob-secondary-text-color;
+  @text-secondary-color-default: @glob-secondary-color;
   @text-size-h1: @glob-text-size-h1;
   @text-size-nav: @glob-text-size-nav;
   @text-size-util: @glob-text-size-cap;
   @nav-bg: @glob-color-neutral;
+}
+
+.about-section() {
+  @about-img-bg: @glob-about-bg;
+}
+.video-section() {
+  @video-img-bg: @glob-video-bg;
+}
+
+.appointment-section() {
+  @appointment-bg-color: @glob-secondary-color;
+  @form-bg-color: @glob-primary-text-color;
 }
