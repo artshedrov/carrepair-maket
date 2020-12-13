@@ -1,76 +1,87 @@
-const gulp = require('gulp');
+const { src, dest, watch, parallel, series } = require('gulp');
 const less = require('gulp-less');
 const concat = require('gulp-concat');
-const minify = require('gulp-minify-css');
-const merge = require('merge-stream');
-const watch = require('gulp-watch');
-const plumber = require('gulp-plumber');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const clean = require('gulp-contrib-clean');
-const browser = require('browser-sync').create();
-const imageMin = require('gulp-imagemin');
+const csso = require('gulp-csso');
+const autoprefixer = require('gulp-autoprefixer');
+const uglify = require('gulp-uglify-es').default;
+const imagemin = require('gulp-imagemin');
+const del = require('del');
 
-gulp.task('copy', async function () {
-  await gulp.src([
-    'src/fonts/**/*.{woff, woff2}',
-    'src/img/**',
-    'src/js/**',
-    'src/*.html',
-    'src/css/**'
-  ], {
-    base: 'src'
-  })
-    .pipe(plumber())
-    .pipe(gulp.dest('build'));
-});
+const browserSync = require('browser-sync').create();
 
-gulp.task('clean', async function () {
-  return gulp.src('build')
-    .pipe(clean());
-});
-
-gulp.task('miniCss', function () {
-  return gulp.src('src/css/*.css')
-    .pipe(minify())
-    .pipe(gulp.dest('build/css'));
-});
-
-gulp.task('miniPic', function () {
-  return gulp.src('build/img/*.{png,jpg,svg}')
-    .pipe(imageMin([
-      imageMin.optipng({optimizationLevel: 3}),
-      imageMin.mozjpeg({progressive: true}),
-      imageMin.svgo()
-    ]))
-    .pipe(gulp.dest('build/img'));
-});
-
-gulp.task('browser-sync', function () {
-  browser.init({
+function browsersync() {
+  browserSync.init({
     server: {
-      baseDir: './src'
+      baseDir: 'src/'
     }
   });
-  return gulp.watch('src/*.html')
-    .on('change', browser.reload);
-});
+}
 
-gulp.task('watcher', function () {
-  return watch('src/less/*.less', function () {
-    let lessStream = gulp.src(['src/less/*.less'])
-      .pipe(plumber())
-      .pipe(less())
-      .pipe(concat('less-files.less'));
+function cleanBuild() {
+  return del('build');
+}
 
-    return merge(lessStream)
-      .pipe(concat('style.css'))
-      .pipe(postcss([autoprefixer]))
-      .pipe(minify())
-      .pipe(gulp.dest('src/css'))
-      .pipe(browser.reload({stream: true}));
-  });
-});
+function images() {
+  return src('src/img/**/*').pipe(imagemin(
+    [
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: true },
+          { cleanupIDs: false }
+        ]
+      })
+    ]
+    ))
+    .pipe(dest('build/img'));
+}
 
-gulp.task('sync', gulp.parallel('watcher', 'browser-sync'));
-gulp.task('build', gulp.series('clean', 'copy', 'miniCss', 'miniPic'));
+function scripts() {
+  return src([
+    'node_modules/jquery/dist/jquery.js',
+    'src/js/main.js'
+  ])
+  .pipe(concat('main.min.js'))
+  .pipe(uglify())
+  .pipe(dest('src/js'))
+  .pipe(browserSync.stream())
+}
+
+function styles() {
+  return src('src/less/style.less')
+  .pipe(less())
+  .pipe(csso())
+  .pipe(concat('style.min.css')).pipe(autoprefixer({
+    overrideBrowserslist: ['last 10 version'],
+    grid: true
+  }))
+  .pipe(dest('src/css'))
+  .pipe(browserSync.stream())
+}
+
+function build() {
+  return src([
+    'src/css/style.min.css',
+    'src/fonts/**/*',
+    'src/js/main.min.js',
+    'src/*.html'
+  ], {base: 'src'})
+  .pipe(dest('build'))
+}
+
+function watching() {
+  watch(['src/less/**/*.less'], styles);
+  watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts);
+  watch(['src/*.html']).on('change', browserSync.reload);
+}
+
+exports.styles = styles;
+exports.watching = watching;
+exports.browsersync = browsersync;
+exports.scripts = scripts;
+exports.build = build;
+
+exports.build = series(cleanBuild, images, build);
+exports.default = parallel(styles, scripts, browsersync, watching);
