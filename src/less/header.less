@@ -11,8 +11,18 @@
 
   background: @bg-header-image center center no-repeat;
   background-size: cover;
-  height: 813px;
+  height: 100vh;
   width: 100%;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 26px;
+    &__high-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
   &__title {
     color: @text-primary-color-default;
     font-size: @text-size-h1;
@@ -59,26 +69,29 @@
   }
 }
 
-.navbar {
+.menu {
   .header-default();
-  &__menu {
+  &__list {
     display: flex;
+    align-items: center;
     flex-direction: row;
     background-color: @nav-bg;
     list-style: none;
-    //margin: 60px 210px;
+    height: 60px;
 
   }
-  &__item {
-    a {
-      color: @text-secondary-color-default;
-      font-size: @text-size-nav;
-      text-decoration: none;
-      font-weight: bold;
-      height: 30px;
-      &:hover {
-        opacity: 0.7;
-      }
+  &__item + &__item {
+    margin-left: 37px;
+  }
+  &__link {
+    color: @text-secondary-color-default;
+    font-size: @text-size-nav;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 22px;
+    &:hover {
+      opacity: 0.7;
     }
   }
+  &__
 }
