@@ -11,17 +11,11 @@
 
   background: @bg-header-image center center no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 810px;
   width: 100%;
   &__inner {
     display: flex;
     flex-direction: column;
-    padding-top: 26px;
-    &__high-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
   }
   &__title {
     color: @text-primary-color-default;
@@ -35,12 +29,17 @@
 
 .top-navigation {
   display: flex;
-  flex-direction: column;
   padding-top: 26px;
-  &__high-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  &__link {
+
+  }
+  &__image {
+
   }
 }
 
@@ -51,21 +50,22 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    margin-right: 30px;
   }
-  &__hours {
-    &__img svg {
-      fill: @fill-default;
-    }
+  &__img svg {
+    margin-right: 10px;
+    margin-bottom: 15px;
+    fill: @fill-default;
   }
-  &__phone {
-    &__img svg {
-      fill: @fill-default;
-    }
-  }
-  &__text {
+  &__content {
     color: @text-primary-color-default;
     font-size: @text-size-util;
-    //padding: 20px;
+  }
+  &__title {
+    text-transform: uppercase;
+  }
+  &__text {
+    
   }
 }
 
@@ -78,7 +78,6 @@
     background-color: @nav-bg;
     list-style: none;
     height: 60px;
-
   }
   &__item + &__item {
     margin-left: 37px;
@@ -93,5 +92,4 @@
       opacity: 0.7;
     }
   }
-  &__
 }
