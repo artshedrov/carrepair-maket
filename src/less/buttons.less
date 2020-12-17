@@ -1,5 +1,6 @@
 .buttons() {
-  @bg-color: #4B4B4B;
+	@bg-btn-color-primary: #4B4B4B;
+	@bg-btn-color-second: #000000;
   @text-color: #fff;
   @text-size: 16px;
 }
@@ -10,26 +11,14 @@
 @button-tint: #E30B0B;
 @background: #303036;
 
-// .button {
-//   .buttons();
-//   display: inline-block;
-//   color: @text-color;
-//   background: linear-gradient(115deg, @bg-color 80%, #E30B0B 80%);
-//   cursor: pointer;
-//   text-decoration: none;
-//   font-size: @text-size;
-//   padding: 10px 5px;
-//   text-transform: uppercase;
-// }
-
 .button {
   .buttons();
 	display: inline-block;
   position: relative;
   text-decoration: none;
 	padding: .8em 1.4em;
-	padding-right: 4.7em;
-	background: @button-colour;
+	padding-right: 3.2em;
+	background: @bg-btn-color-primary;
 	border: none;
 	color: @text-color;
   transition: .2s;
@@ -46,40 +35,38 @@
 		padding-top: inherit;
 		padding-bottom: inherit;
 		width: 43px;
-		content: "\00a0";
+		content: "";
 		font-size: @text-size;
 		text-align: center;
-		
 		transition: .2s;
 		transform-origin: 50% 60%;
 	}
 	&:before {
-		background: @button-tint;
+		background: @bg-btn-color-second;
 	}
 	&:hover {
-		background: darken(@button-colour, 10%);
+		background: darken(@bg-btn-color-primary, 10%);
 	}
 	&:active,
 	&:focus {
-		background: darken(@button-colour, 30%);
+		background: darken(@bg-btn-color-primary, 30%);
 		outline: none;
 	}
-}
-
-.arrow {
-	background: #FE5F55;
+	&__arrow {
+		//background: @bg-btn-color-second;
 	&:hover {
-    background: darken(#FE5F55, 10%);
+    background: darken(@bg-btn-color-second, 10%);
 	}
 	&:active,
 	&:focus {
-		background: darken(#FE5F55, 30%);
+		background: darken(@bg-btn-color-second, 30%);
 	} 
 	&:after {
     content:url('../img/arrow_forward_24px.svg');
 	}
 	&:hover:after {
 		animation: bounceright .3s alternate ease infinite;
+	}
 	}
 }
 
