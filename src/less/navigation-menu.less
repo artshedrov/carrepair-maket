@@ -1,15 +1,17 @@
 .menu {
   .header-default();
+  height: 100%;
+  width: 100%;
   &__list {
     display: flex;
     align-items: center;
     flex-direction: row;
     background-color: @nav-bg;
     list-style: none;
-    height: 60px;
   }
   &__item {
     position: relative;
+    padding: 20px 0;
     transition-duration: 0.5s;
   }
   &__item + &__item {
@@ -21,21 +23,20 @@
     text-decoration: none;
     font-weight: bold;
     line-height: 22px;
+    &:hover,
+    :focus-within {
+      color: @fill-default;
+    }
   }
   &__arrow { 
     border: solid @fill-default;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
     margin-bottom: 2px;
-    margin-left: 5px;
+    margin-left: 10px;
     transition: all 0.5s ease;
-    &--active {
-      transform: rotate(-135deg);
-      margin-bottom: -2px;
-      transition: all 0.5s ease;
-    }
   }
 }
 
@@ -49,14 +50,10 @@
   opacity: 0;
   visibility: hidden;
   padding: 20px 5px 0 0;
-  display: none;
+  box-shadow: 0 3px 0 #000;
+  list-style: none;
+  padding: 30px;
   animation: fadein 0.5s ease-in-out;
-  &--active {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-    width: 130px;
-    }
   }
   &__link {
     color: @text-secondary-color-default;
@@ -65,13 +62,24 @@
     font-weight: bold;
     line-height: 22px;
     padding: 5px;
+    &:hover,
+    :focus-within {
+      color: @fill-default;
+    }
   }
-}
-
-li a:hover,
-li a:focus-within {
-  .header-default();
-	color: @fill-default;
+  &__head {
+    &:hover {
+      .sub-menu__list {
+        visibility: visible;
+        opacity: 1; 
+      }
+      .menu__arrow {
+        transform: rotate(-135deg);
+        margin-bottom: -2px;
+        transition: all 0.5s ease;
+      }
+    }
+  }
 }
 
 @keyframes fadein {
