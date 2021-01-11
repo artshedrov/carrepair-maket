@@ -1,25 +1,26 @@
 .buttons() {
 	@bg-btn-color-primary: #4B4B4B;
 	@bg-btn-color-second: #000000;
-  @text-color: #fff;
-  @text-size: 16px;
+	@text-color: #fff;
+	@text-size: 16px;
 }
 
 .button {
-  .buttons();
+	.buttons();
 	display: inline-block;
-  position: relative;
-  text-decoration: none;
+	position: relative;
+	text-decoration: none;
 	padding: .8em 1.4em;
 	padding-right: 3.2em;
 	background: @bg-btn-color-primary;
 	border: none;
 	color: @text-color;
-  transition: .2s;
-  font-size: @text-size;
-  text-transform: uppercase;
-  min-width: 15em;
+	transition: .2s;
+	font-size: @text-size;
+	text-transform: uppercase;
+	min-width: 15em;
 	cursor: pointer;
+	z-index: 1;
 	&:before,
 	&:after {
 		position: absolute;
@@ -47,7 +48,6 @@
 		outline: none;
 	}
 	&__arrow {
-		//background: @bg-btn-color-second;
 	&:hover {
     background: darken(@bg-btn-color-second, 10%);
 	}

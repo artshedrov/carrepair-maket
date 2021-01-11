@@ -1,5 +1,5 @@
 .menu {
-  .header-default();
+  .header-var();
   height: 100%;
   width: 100%;
   display: flex;
@@ -45,19 +45,32 @@
 }
 
 .sub-menu {
-  .header-default();
+  .header-var();
   &__list {
   background-color: @nav-bg;
   position: absolute;
   list-style: none;
   left: 0;
   opacity: 0;
+  padding: 10px;
+  margin-top: 20px;
   visibility: hidden;
-  padding: 20px 5px 0 0;
-  box-shadow: 0 3px 0 #000;
+  width: 15vw;
   list-style: none;
-  padding: 30px;
   animation: fadein 0.5s ease-in-out;
+  z-index: 2;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-shadow: -1px 2px 5px -1px @fill-default;
+  :before {
+    content: '\A';
+    position: absolute;
+    top: -20px;
+    left: calc(10% - 15px);
+    border-width: 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent @fill-default;
+    }
   }
   &__link {
     color: @text-secondary-color-default;
