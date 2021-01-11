@@ -1,0 +1,17 @@
+.search {
+  position: relative;
+  display: flex;
+  &__input {
+    border-color: transparent !important;
+    background-color: initial !important;
+    transition: all .6s cubic-bezier(.1,.57,.1,1);
+    width: 0;
+    outline: none;
+    &:hover {
+      width: 100px;
+    }
+  }
+  &__icon {
+    margin-right: 5px;
+  }
+}
