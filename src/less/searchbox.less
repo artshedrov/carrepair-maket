@@ -1,6 +1,7 @@
 .search {
   position: relative;
   display: flex;
+  margin-right: 20px;
   &__input {
     border-color: transparent !important;
     background-color: initial !important;
@@ -13,5 +14,26 @@
   }
   &__icon {
     margin-right: 5px;
+  }
+}
+
+[data-basketcount] {
+  .header-var();
+  position: relative;
+  &:after {
+    content: attr(data-basketcount);
+    background: @fill-default;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    display: block;
+    position: absolute;
+    line-height: 1.2em;
+    color: @text-primary-color-default;
+    top: -1.2em;
+    right: -0.7em;
+    text-align: center;
+    padding: 2px;
+    font-size: @text-size-nav;
   }
 }
