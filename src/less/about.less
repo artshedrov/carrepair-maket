@@ -1,8 +1,34 @@
 .about {
-  background-color: #ffffff;
+  .about-section();
+  .section-var();
+  &__container {
+    background-color:@about-bg;
+    position: relative;
+    top: -80px;
+  }
+  &__wrapper {
+    padding-left: 87px;
+    padding-right: 87px;
+    z-index: 2;
+    position: relative;
+    top: 80px;
+    margin-bottom: 100px;
+  }
+  &__header {
+    margin: 0;
+    width: 50%;
+    padding: 30px 10px 0 0;
+  }
+  &__text {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: @section-text-color;
+    line-height: 24px;
+    font-weight: normal;
+    letter-spacing: 0.15px;
+    font-style: normal;
+  }
   &__img {
-    .about-section();
-
     background: @about-img-bg center center no-repeat;
     height: 420px;
   }

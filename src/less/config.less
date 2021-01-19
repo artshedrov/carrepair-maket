@@ -2,13 +2,17 @@
 @glob-secondary-color: #02133C;
 @glob-btn-color-primary: #C40B0B;
 @glob-btn-color-secondary: #E30B0B;
+@glob-text-color-light: #4B4B4B;
 @glob-fill-svg: #C40B0B;
 @glob-color-neutral: #fff;
 @glob-body-color: #F5F5F5;
+@glob-about-bg: #fff;
 
 @glob-img-header: url("../img/Heroshot3.png");
 @glob-logo-header: url("../img/Logo-Placeholder-5.png");
-@glob-about-bg: url("../img/about-image.png");
+
+@glob-about-img-bg: url("../img/about-image.png");
+
 @glob-video-bg: url("../img/video-bg.png");
 
 @glob-text-size-h1: 56px;
@@ -45,8 +49,16 @@
   @nav-bg: @glob-color-neutral;
 }
 
+.section-var() {
+  @section-text-size-header: @glob-text-size-cap;
+  @section-title-color: @glob-text-color-light;
+  @section-text-color: @glob-text-color-light;
+  @section-header-text-color: @glob-secondary-color;
+}
 .about-section() {
-  @about-img-bg: @glob-about-bg;
+  @about-bg: @glob-about-bg;
+  @about-img-bg: @glob-about-img-bg;
+  @about-text-color: @glob-secondary-color;
 }
 .video-section() {
   @video-img-bg: @glob-video-bg;

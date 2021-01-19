@@ -3,3 +3,19 @@
   margin: 0 auto;
   padding: 0 10px;
 }
+.section-header {
+  .section-var();
+  padding-top: 20px;
+  &__text {
+    color: @section-header-text-color;
+  }
+  &__overline {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: @section-text-size-header;
+    font-style: normal;
+    font-weight: bold;
+    color: @section-title-color;
+  }
+}
