@@ -41,6 +41,7 @@ function images() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/wowjs/dist/wow.js',
     'src/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -50,7 +51,10 @@ function scripts() {
 }
 
 function styles() {
-  return src('src/less/style.less')
+  return src([
+    'src/less/style.less',
+    'node_modules/wowjs/css/libs/animate.css'
+  ])
   .pipe(less())
   .pipe(csso())
   .pipe(concat('style.min.css')).pipe(autoprefixer({
