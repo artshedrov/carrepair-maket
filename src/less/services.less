@@ -1,0 +1,50 @@
+.services {
+	.section-var();
+	.services-var();
+	margin-bottom: 100px;
+	&__block {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__card {
+		margin: 12px;
+		//background-color: green;
+		//height: 20px;
+		width: 30%;
+		background-color: @services-card-color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		cursor: pointer;
+		&__title {
+			font-size: 19px;
+			margin: 10px 0;
+			line-height: 26px;
+			color: @section-header-text-color;
+		}
+		&__text {
+			text-align: center;
+			color: @section-title-color;
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.15px;
+			margin: 10px 40px 50px 40px;
+			padding: 5px;
+		}
+		&__image {
+			margin: 50px 130px 15px 130px;
+		}
+		&:hover {
+			filter: drop-shadow(0px 16px 24px rgba(38, 38, 38, 0.2));
+		}
+		&:active {
+			filter: drop-shadow(0px 8px 16px rgba(38, 38, 38, 0.24));
+		}
+	}
+	&__button {
+		margin-top: 60px;
+		min-width: 10em;
+	}
+}
