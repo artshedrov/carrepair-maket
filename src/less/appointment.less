@@ -1,13 +1,53 @@
 .appointment {
   .appointment-section();
-
   background-color: @appointment-bg-color;
-  height: 980px;
+  padding-bottom: 200px;
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 130px;
+  }
 }
 
 .form {
   .appointment-section();
   background-color: @form-bg-color;
   height: 640px;
-  width: 585px;
+  min-width: 585px;
+  padding: 10px;
+  width: 50%;
+}
+
+.stat {
+  .appointment-section();
+  display: flex;
+  flex-direction: column;
+  padding: 150px 0 0 100px;
+  align-items: center;
+  width: 50%;
+  flex-wrap: wrap;
+  &__header {
+    font-size: @stat-header-text-size;
+    color: @stat-header-text-color;
+    margin-bottom: 20px;
+    font-weight: 900;
+    line-height: 36px;
+    text-align: center;
+    padding: 5px;
+    word-break: break-word;
+  }
+  &__count {
+    font-size: @stat-count-text-size;
+    color: @stat-count-text-color;
+    margin: 20px 0 22px 0;
+    font-weight: 900;
+    line-height: 56px;
+    text-align: center;
+  }
+  &__count-descrition {
+    font-size: @stat-count-description-text-size;
+    color: @stat-count-description-text-color;
+    margin-top: 22px;
+  }
 }

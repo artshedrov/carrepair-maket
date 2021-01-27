@@ -1,4 +1,5 @@
 @glob-primary-text-color: #fff;
+@glob-secondary-text-color: #C40B0B;
 @glob-secondary-color: #02133C;
 @glob-btn-color-primary: #C40B0B;
 @glob-btn-color-secondary: #E30B0B;
@@ -15,6 +16,7 @@
 
 @glob-video-bg: url("../img/video-bg.png");
 
+@glob-text-size-count: 96px;
 @glob-text-size-h1: 56px;
 @glob-text-size-h2: 42px;
 @glob-text-size-h3: 36px;
@@ -35,7 +37,7 @@
   @bg-btn-color-primary: @glob-btn-color-primary;
   @bg-btn-color-second: @glob-btn-color-secondary;
   @bg-btn-color-white: @glob-color-neutral;
-  @text-size: @glob-text-size-btn;
+  @text-size: @glob-text-size-cap;
   @fill-default: @glob-fill-svg;
 } 
 
@@ -78,4 +80,10 @@
 .appointment-section() {
   @appointment-bg-color: @glob-secondary-color;
   @form-bg-color: @glob-primary-text-color;
+  @stat-header-text-size: @glob-text-size-h4;
+  @stat-header-text-color: @glob-color-neutral;
+  @stat-count-text-color: @glob-secondary-text-color;
+  @stat-count-text-size: @glob-text-size-count;
+  @stat-count-description-text-size: @glob-text-size-h6;
+  @stat-count-description-text-color: @glob-color-neutral;
 }
