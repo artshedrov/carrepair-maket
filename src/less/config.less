@@ -8,6 +8,7 @@
 @glob-color-neutral: #fff;
 @glob-body-color: #F5F5F5;
 @glob-about-bg: #fff;
+@glob-color-neutral-gray: #959595;
 
 @glob-img-header: url("../img/Heroshot3.png");
 @glob-logo-header: url("../img/Logo-Placeholder-5.png");
@@ -78,6 +79,10 @@
 }
 
 .appointment-section() {
+  @form-placeholder-text-size: @glob-text-size-body;
+  @form-placeholder-text-color: @glob-color-neutral-gray;
+  @form-field-color: @glob-body-color;
+  @form-focus-color: @glob-btn-color-primary;
   @appointment-bg-color: @glob-secondary-color;
   @form-bg-color: @glob-primary-text-color;
   @stat-header-text-size: @glob-text-size-h4;
