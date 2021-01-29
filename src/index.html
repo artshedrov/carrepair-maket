@@ -246,37 +246,52 @@
       </div>
     </div>
   </section> 
-  <section>
-    <div class="container" id="gallery">
-      <div class="section-header">
-        <div class="section-header__overline">
-          <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.272 6.61768L9.71362 8.17282L14.7757 13.2353L9.71362 18.2978L11.272 19.853L17.9036 13.2353L11.272 6.61768Z" fill="#959595"/>
-            <path d="M10.5908 10.4227L9.72498 9.55878L6.04077 13.2352L9.72498 16.9117L10.5908 16.0477L7.77849 13.2352L10.5908 10.4227Z" fill="#C40B0B"/>
-            </svg>
-          <div class="section-header__overline__text">GALLERY & LIVE STREAMS</div>
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery__container">
+        <div class="gallery__wrapper">
+          <div class="section-header">
+            <div class="section-header__overline">
+              <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.272 6.61768L9.71362 8.17282L14.7757 13.2353L9.71362 18.2978L11.272 19.853L17.9036 13.2353L11.272 6.61768Z" fill="#959595"/>
+                <path d="M10.5908 10.4227L9.72498 9.55878L6.04077 13.2352L9.72498 16.9117L10.5908 16.0477L7.77849 13.2352L10.5908 10.4227Z" fill="#C40B0B"/>
+              </svg>
+              <div class="section-header__overline__text">GALLERY & LIVE STREAMS</div>
+            </div>
+            <h2 class="section-header__text gallery__header">Check out our hard workers</h2>
+          </div>
+          <div class="gallery__content">
+            <div class="tab_navigation">
+              <button class="tab__btn tab__btn--active" data-tab-target="#gallery">Gallery</button>
+              <button class="tab__btn" data-tab-target="#live1">Live stream: Bay 1</button>
+              <button class="tab__btn" data-tab-target="#live2">Live stream: Bay 2</button>
+              <button class="tab__btn" data-tab-target="#live3">Live stream: Bay 3</button>
+            </div>
+            <div>
+              <div id="gallery" data-tab-content class="tab tab--active">
+                <div class="tab__item">
+                  <img class="tab__img" src="img/Stream1.png" alt="">
+                </div>
+              </div>
+
+              <div id="live1" data-tab-content class="tab">
+                <div class="tab__item">
+                  <img class="tab__img" src="img/Stream2.png" alt="">
+                </div>
+              </div>
+              <div id="live2" data-tab-content class="tab">
+                <div class="tab__item">
+                  <img class="tab__img" src="img/Stream1.png" alt="">
+                </div>
+              </div>
+              <div id="live3" data-tab-content class="tab">
+                <div class="tab__item">
+                  <img class="tab__img" src="img/Stream2.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h2 class="section-header__text">Check out our hard workers</h2>
-      </div>
-
-      <div class="tab_navigation">
-        <button class="tab__btn tab__btn--active" data-tab-target="#gallery">Gallery</button>
-        <button class="tab__btn" data-tab-target="#live1">Live stream: Bay 1</button>
-        <button class="tab__btn" data-tab-target="#live2">Live stream: Bay 2</button>
-        <button class="tab__btn" data-tab-target="#live3">Live stream: Bay 3</button>
-      </div>
-
-      <div id="gallery">
-        <div class="tab__item"></div>
-      </div>
-      <div id="live1">
-        <div class="tab__item"></div>
-      </div>
-      <div id="live2">
-        <div class="tab__item"></div>
-      </div>
-      <div id="live3">
-        <div class="tab__item"></div>
       </div>
     </div>
   </section>
