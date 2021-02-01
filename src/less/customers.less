@@ -1,0 +1,42 @@
+.customers {
+  .customers-var();
+  margin: 120px 0;
+  &__wrapper {
+    display: flex;
+  }
+  &__block {
+    flex-wrap: nowrap;
+  }
+  &__header {
+    padding: 0;
+    flex: 0 0 350px;
+  }
+  &__card {
+    margin: 0 24px;
+    width: 30%;
+    flex: 0 0 300px;
+    &__text {
+      margin: 0;
+      text-align: left;
+      padding: 40px 40px 18px 40px;
+    }
+  }
+  &__container {
+    display: flex;
+    padding: 20px 40px 40px 18px;
+  }
+  &__img {
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+  }
+  &__name {
+    margin-left: 8px;
+    color: @customers-name-text-color;
+    font-weight: bold;
+    font-size: @customers-name-text-size;
+    letter-spacing: 0.15px;
+    word-break: break-word;
+  }
+}
