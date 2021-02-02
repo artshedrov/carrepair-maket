@@ -21,11 +21,16 @@
   &__overline {
     display: flex;
     align-items: center;
-    text-transform: uppercase;
-    font-size: @section-text-size-header-overline;
-    font-style: normal;
-    font-weight: bold;
-    color: @section-title-color;
-    letter-spacing: 2.5px;
+    &__text {
+      text-transform: uppercase;
+      font-size: @section-text-size-header-overline;
+      font-style: normal;
+      font-weight: bold;
+      color: @section-title-color;
+      letter-spacing: 2.5px;
+      &--gray {
+        color: @section-overline-gray-text-color;
+      }
+    }
   }
 }

@@ -9,6 +9,7 @@
 @glob-body-color: #F5F5F5;
 @glob-section-white-bg: #fff;
 @glob-color-neutral-gray: #959595;
+@glob-color-gray: #D5D5D5;
 
 @glob-img-header: url("../img/Heroshot3.png");
 @glob-logo-header: url("../img/Logo-Placeholder-5.png");
@@ -60,6 +61,7 @@
   @section-header-text-color-white: @glob-primary-text-color;
   @section-header-text-color: @glob-secondary-color;
   @section-header-text-size: @glob-text-size-h3;
+  @section-overline-gray-text-color: @glob-color-gray;
 }
 .about-section() {
   @about-bg: @glob-section-white-bg;
@@ -105,4 +107,13 @@
 .customers-var() {
   @customers-name-text-size: @glob-text-size-body;
   @customers-name-text-color: @glob-secondary-color;
+}
+
+.stats-var() {
+  @stats-bg: @glob-secondary-color;
+  @stats-header-text-color: @glob-color-neutral;
+  @stats-count-text-color: @glob-secondary-text-color;
+  @stats-count-description-text-color: @glob-body-color;
+  @stats-count-text-size: @glob-text-size-h3;
+  @stats-count-description-text-size: @glob-text-size-body; 
 }
