@@ -43,7 +43,8 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/wowjs/dist/wow.js',
     'src/js/main.js',
-    'src/js/tabs.js'
+    'src/js/tabs.js',
+    'src/js/countUp.js'
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
