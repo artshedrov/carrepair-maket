@@ -44,7 +44,8 @@ function scripts() {
     'node_modules/wowjs/dist/wow.js',
     'src/js/main.js',
     'src/js/tabs.js',
-    'src/js/countUp.js'
+    'src/js/countUp.js',
+    'src/js/video.js'
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
