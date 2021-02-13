@@ -46,7 +46,6 @@ function scripts() {
     'src/js/tabs.js',
     'src/js/count.js',
     'src/js/video.js',
-    'src/js/jquery.rcounter.js',
     'src/js/jquery.waypoints.js',
     'src/js/jquery.counterup.js'
   ])
