@@ -44,6 +44,7 @@ function scripts() {
     'node_modules/wowjs/dist/wow.js',
     'src/js/main.js',
     'src/js/tabs.js',
+    //'src/js/tabs-video.js',
     'src/js/count.js',
     'src/js/video.js',
     'src/js/jquery.waypoints.js',

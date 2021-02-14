@@ -161,7 +161,6 @@
             </svg>
           </button>
         </a>
-
       </div>
     </div>
   </section>
@@ -269,7 +268,7 @@
             <h2 class="section-header__text gallery__header wow slideInLeft" data-wow-duration="0.8s" data-wow-delay="1s">Check out our hard workers</h2>
           </div>
           <div class="gallery__content">
-            <div class="tab_navigation">
+            <div class="tab__navigation">
               <button class="tab__btn tab__btn--active" data-tab-target="#gallery">Gallery</button>
               <button class="tab__btn" data-tab-target="#live1">Live stream: Bay 1</button>
               <button class="tab__btn" data-tab-target="#live2">Live stream: Bay 2</button>
@@ -278,7 +277,20 @@
             <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
               <div id="gallery" data-tab-content class="tab tab--active">
                 <div class="tab__item">
-                  <img class="tab__img" src="img/Stream1.png" alt="">
+                  <!-- <img class="tab__img" src="img/Stream1.png" alt=""> -->
+                  <div class="video__block">
+                    <!-- <h2 class="section-header__text section-header__text--white video__header wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">Nemo enim ipsam voluptatem quia voluptas in proident</h2> -->
+                    <a class="video__link" href="https://youtu.be/K2FVgDSpSgI">
+                      <picture>
+                        <img class="video__img" src="img/Stream1.png" alt="Video">
+                      </picture>
+                      <button class="play-button" aria-label="Play video">
+                        <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                          <path class="play-button__shape" d="M13 10V38L35 24L13 10Z"/>
+                        </svg>
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -359,28 +371,32 @@
         <div class="stats__block">
           <img class="stats__block__img" src="img/car_oil-24x.svg" alt="">
           <div class="stats__block__info">
-            <h3 class="stats__count">16</h3>
+            <h3 class="stats__count">
+              <span class="stats-num">16</span>k+</h3>
             <p class="stats__text">Oil changes</p>
           </div>
         </div>
         <div class="stats__block">
           <img class="stats__block__img" src="img/car_transmission_24x.svg" alt="">
           <div class="stats__block__info">
-            <h3 class="stats__count">13</h3>
+            <h3 class="stats__count"><span class="stats-num">13</span>k+</h3>
             <p class="stats__text">Transmission repairs</p>
           </div>
         </div>
         <div class="stats__block">
           <img class="stats__block__img" src="img/car_alignment_24x.svg" alt="">
           <div class="stats__block__info">
-            <h3 class="stats__count">15</h3>
+            <h3 class="stats__count"><span class="stats-num">15</span>k+</h3>
             <p class="stats__text">Alignments made</p>
           </div>
         </div>
         <div class="stats__block">
           <img class="stats__block__img" src="img/car_engine_2_24x.svg" alt="">
           <div class="stats__block__info">
-            <h3 class="stats__count">11,500</h3>
+            <h3 class="stats__count">
+              <span class="stats-num">11,500</span>
+              <span>+</span>
+            </h3>
             <p class="stats__text">Engines repaired</p>
           </div>
         </div>
