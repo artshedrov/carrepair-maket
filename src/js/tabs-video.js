@@ -1,20 +1,20 @@
-function findVideos() {
-  let videos = document.querySelectorAll('.video__block');
+function findVideosTab() {
+  let videos = document.querySelectorAll('.tab__video');
   for (let i = 0; i < videos.length; i++) {
-    setupVideo(videos[i]);
+    setupVideoTab(videos[i]);
   }
 }
 
-function setupVideo(video) {
+function setupVideoTab(video) {
   let link = video.querySelector('.video__link');
-  let media = link;
+  let media = video.querySelector('.tab__media');
+  //let media = link;
   let button = video.querySelector('.play-button');
-  let id = parseMediaURL(media);
-  let title = video.querySelector('.video__header');
+  let id = parseMediaURLTab(media);
+  //let title = video.querySelector('.video__header');
 
   video.addEventListener('click', () => {
-      let iframe = createIframe(id);
-      // title.remove();
+      let iframe = createIframeTab(id);
       link.remove();
       button.remove();
       video.appendChild(iframe);
@@ -23,29 +23,29 @@ function setupVideo(video) {
   video.classList.add('video--enabled');
 }
 
-function parseMediaURL(media) {
-  let regexp = /https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)/i;
-  let url = media.href;
+function parseMediaURLTab(media) {
+  let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
+  let url = media.src;
   let match = url.match(regexp);
 
   return match[1];
 }
 
-function createIframe(id) {
+function createIframeTab(id) {
   let iframe = document.createElement('iframe');
 
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('allow', 'autoplay');
-  iframe.setAttribute('src', generateURL(id));
+  iframe.setAttribute('src', generateURLTab(id));
   iframe.classList.add('video__img');
 
   return iframe;
 }
 
-function generateURL(id) {
+function generateURLTab(id) {
   let query = '?rel=0&showinfo=0&autoplay=1';
 
   return 'https://www.youtube.com/embed/' + id + query;
 }
 
-findVideos();
+findVideosTab();
