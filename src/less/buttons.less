@@ -10,7 +10,7 @@
 	display: inline-block;
 	position: relative;
 	text-decoration: none;
-	padding: 1.4em 3.2em 1.4em 1.4em;
+	padding: 1.4em 3.8em 1.4em 1em;
 	background: @bg-btn-color-primary;
 	border: none;
 	color: @text-color;
@@ -34,15 +34,17 @@
 		right: 0;
 		padding-top: inherit;
 		padding-bottom: inherit;
-		width: 2.5em;
+		width: 3.5em;
 		content: "";
 		font-size: @text-size;
 		text-align: center;
 		transition: .2s;
 		transform-origin: 50% 60%;
+		padding-left: 0.2em;
 	}
 	&:before {
 		background: @bg-btn-color-second;
+		clip-path: polygon(10% 100%, 100px 200%, 100% 0px, 60% -80%)
 	}
 	&:hover {
 		background: darken(@bg-btn-color-primary, 10%);
