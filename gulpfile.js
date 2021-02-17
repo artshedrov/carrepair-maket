@@ -42,6 +42,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/wowjs/dist/wow.js',
+    'src/js/modal.js',
     'src/js/main.js',
     'src/js/tabs.js',
     //'src/js/tabs-video.js',

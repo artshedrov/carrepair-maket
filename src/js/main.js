@@ -12,4 +12,9 @@ let wow = new WOW(
     scrollContainer: null // optional scroll container selector, otherwise use window
   }
 );
+
+let myModal = new Modal({
+  linkAttributeName: 'data-modal', 
+});
+
 wow.init();
