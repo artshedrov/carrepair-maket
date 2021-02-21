@@ -295,9 +295,9 @@
               <div id="live1" data-tab-content class="tab">
                 <div class="tab__item">
                   <div class="tab__video">
-                    <a class="video__link" href="https://youtu.be/K2FVgDSpSgI">
+                    <a class="video__link" href="https://youtu.be/NH1GZZu6bck">
                       <picture>
-                        <img class="video__img" src="img/Stream1.png" alt="Video">
+                        <img class="video__img" src="https://i.ytimg.com/vi/NH1GZZu6bck/hqdefault.jpg" alt="Video">
                       </picture>
                       <button class="play-button" aria-label="Play video">
                         <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -311,9 +311,9 @@
               <div id="live2" data-tab-content class="tab">
                 <div class="tab__item">
                   <div class="tab__video">
-                    <a class="video__link" href="https://youtu.be/K2FVgDSpSgI">
+                    <a class="video__link" href="https://youtu.be/BFULP7UKxUA">
                       <picture>
-                        <img class="video__img" src="img/Stream1.png" alt="Video">
+                        <img class="video__img" src="https://i.ytimg.com/vi/BFULP7UKxUA/hqdefault.jpg" alt="Video">
                       </picture>
                       <button class="play-button" aria-label="Play video">
                         <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -327,9 +327,9 @@
               <div id="live3" data-tab-content class="tab">
                 <div class="tab__item">
                   <div class="tab__video">
-                    <a class="video__link" href="https://youtu.be/K2FVgDSpSgI">
+                    <a class="video__link" href="https://youtu.be/I0QF5tLfXWQ">
                       <picture>
-                        <img class="video__img" src="img/Stream1.png" alt="Video">
+                        <img class="video__img" src="https://i.ytimg.com/vi/I0QF5tLfXWQ/hqdefault.jpg" alt="Video">
                       </picture>
                       <button class="play-button" aria-label="Play video">
                         <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -440,33 +440,39 @@
       <div class="appointment-block__container">
         <h5 class="appointment-block__header wow slideInDown" data-wow-duration="0.6s" data-wow-delay="0.8s">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h5>
         <div class="button__container wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
-          <a class="button button__arrow button--appointment" href="#">Make an appointment</a>
+          <a class="button button__arrow button--appointment" href="#" data-modal="#MyModal">Make an appointment</a>
         </div>
       </div>
     </div>
   </section>
 
   <div class="wrapper__modal">
-    <form class="form__content modal" action="#" name="appointment_form" id="MyModal">
-      <p class="form__wrapper">
-        <input class="form__input form__layout form--font-format" type="text" placeholder="Name">
-      </p>
-      <p class="form__wrapper">
-        <input class="form__input form__layout form--font-format" type="text" placeholder="Email">
-      </p>
-      <p class="form__wrapper">
-        <input class="form__input form__layout form--font-format" type="text" placeholder="Phone Number">
-      </p>
-      <p class="form__wrapper">
-        <input class="form__input form__layout form--font-format" type="text" name="text" placeholder="Select Service">
-      </p>
-      <p class="form__wrapper form--full">
-        <textarea class="form__textarea form__layout form--font-format" name="" id="" cols="30" rows="7" placeholder="Tell us about the car needing service(s)"></textarea>
-      </p>
-      <p class="form__wrapper form--half">
-        <a class="button button__arrow appointment__button" href="#" data-close="#MyModal">Make an appointment</a>
-      </p>
-    </form>
+    <div class="modal" name="appointment_form" id="MyModal">
+      <div class="section-header">
+        <h2 class="section-header__text form__header">Make an appointment</h2>
+      </div>
+      <button class="modal-close" type="button" data-close="#MyModal">Close</button>
+      <form class="form__content" action="#">
+        <p class="form__wrapper">
+          <input class="form__input form__layout form--font-format" type="text" placeholder="Name">
+        </p>
+        <p class="form__wrapper">
+          <input class="form__input form__layout form--font-format" type="text" placeholder="Email">
+        </p>
+        <p class="form__wrapper">
+          <input class="form__input form__layout form--font-format" type="text" placeholder="Phone Number">
+        </p>
+        <p class="form__wrapper">
+          <input class="form__input form__layout form--font-format" type="text" name="text" placeholder="Select Service">
+        </p>
+        <p class="form__wrapper form--full">
+          <textarea class="form__textarea form__layout form--font-format" name="" id="" cols="30" rows="7" placeholder="Tell us about the car needing service(s)"></textarea>
+        </p>
+        <p class="form__wrapper form--half">
+          <a class="button button__arrow appointment__button" href="#" data-close="#MyModal">Make an appointment</a>
+        </p>
+      </form>
+    </div>
   </div>
 
   <footer>
@@ -529,7 +535,6 @@
     </div>
   </footer>
   <script src="js/main.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script> -->
   </script>
   <div class="modal__shadow"></div>
 </body>

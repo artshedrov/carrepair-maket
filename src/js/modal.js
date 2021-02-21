@@ -33,11 +33,11 @@ class Modal{
      * Создаём триггеры состояния, полезные переменные и.т.д.
      */
     this.isOpened = false; // открыто ли окно
-    this.openedWindow = false; //ссылка на открытый .hystmodal
-    this._modalBlock = false; //ссылка на открытый .hystmodal__window
+    this.openedWindow = false; //ссылка на открытый .modal
+    this._modalBlock = false; //ссылка на открытый .modal__window
     this.starter = false, //ссылка на элемент "открыватель" текущего окна
     // (он нужен для возвращения фокуса на него)
-    this._nextWindows = false; //ссылка на .hystmodal который нужно открыть
+    this._nextWindows = false; //ссылка на .modal который нужно открыть
     this._scrollPosition = 0; //текущая прокрутка (см. выше)
 
     /**
@@ -173,7 +173,7 @@ class Modal{
     this.openedWindow.setAttribute('aria-hidden', 'true');
 
     //возвращаем фокус на элемент которым открылось окно
-    this.focusContol();
+    //this.focusContol();
 
     //возвращаем скролл
     this._bodyScrollControl();

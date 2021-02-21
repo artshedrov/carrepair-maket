@@ -17,4 +17,11 @@ let myModal = new Modal({
   linkAttributeName: 'data-modal', 
 });
 
+let tabVideo = new VideoTab({
+  videoTabAttribute: '.tab__video',
+  videoLinkAttribute: '.video__link',
+  tabMediaAttribute: '.video__img',
+  playButtonAttribute: '.play-button'
+});
+
 wow.init();
