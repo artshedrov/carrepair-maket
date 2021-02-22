@@ -5,8 +5,6 @@ Licensed under the MIT license.
 https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 */
 (function() {
-  'use strict'
-
   var keyCounter = 0
   var allWaypoints = {}
 
@@ -169,8 +167,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   window.Waypoint = Waypoint
 }())
 ;(function() {
-  'use strict'
-
   function requestAnimationFrameShim(callback) {
     window.setTimeout(callback, 1000 / 60)
   }
@@ -478,7 +474,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.Context = Context
 }())
 ;(function() {
-  'use strict'
 
   function byTriggerPoint(a, b) {
     return a.triggerPoint - b.triggerPoint
@@ -583,7 +578,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.Group = Group
 }())
 ;(function() {
-  'use strict'
 
   var $ = window.jQuery
   var Waypoint = window.Waypoint
@@ -624,7 +618,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.Adapter = JQueryAdapter
 }())
 ;(function() {
-  'use strict'
 
   var Waypoint = window.Waypoint
 

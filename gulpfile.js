@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify-es').default;
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const babel = require('gulp-babel');
 
 const browserSync = require('browser-sync').create();
 
@@ -51,8 +52,12 @@ function scripts() {
     'src/js/jquery.waypoints.js',
     'src/js/jquery.counterup.js'
   ])
+  .pipe(babel({
+    presets: ["@babel/preset-env"], 
+    plugins: ["@babel/plugin-proposal-class-properties"]
+  }))
   .pipe(concat('main.min.js'))
-  .pipe(uglify())
+  //.pipe(uglify())
   .pipe(dest('src/js'))
   .pipe(browserSync.stream())
 }
