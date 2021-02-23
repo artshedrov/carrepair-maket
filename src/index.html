@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+
   <title>Car repair</title>
 </head>
 <body class="body__container">
@@ -276,7 +278,7 @@
             </div>
             <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
               <div id="gallery" data-tab-content class="tab tab--active">
-                <div class="tab__item">
+                <!-- <div class="tab__item">
                   <div class="tab__video">
                     <a class="video__link" href="https://youtu.be/K2FVgDSpSgI">
                       <picture>
@@ -289,7 +291,37 @@
                       </button>
                     </a>
                   </div>
-                </div>
+                </div> -->
+
+                <div class="tab__item">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <picture>
+                          <img class="video__img" src="./img/Stream1.png" alt="Video">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <img class="video__img" src="./img/Stream2.png" alt="Video">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <img class="video__img" src="./img/Stream1.png" alt="Video">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <img class="video__img" src="./img/Stream2.png" alt="Video">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div> 
               </div>
 
               <div id="live1" data-tab-content class="tab">

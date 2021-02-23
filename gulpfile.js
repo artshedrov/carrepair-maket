@@ -43,6 +43,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/wowjs/dist/wow.js',
+    'src/js/swiper.js',
     'src/js/tabs-video.js',
     'src/js/video.js',
     'src/js/tabs.js',
@@ -54,10 +55,10 @@ function scripts() {
   ])
   .pipe(babel({
     presets: ["@babel/preset-env"], 
-    plugins: ["@babel/plugin-proposal-class-properties"]
+    plugins: [["@babel/plugin-proposal-class-properties"], ["remove-use-strict"]]
   }))
   .pipe(concat('main.min.js'))
-  //.pipe(uglify())
+  .pipe(uglify())
   .pipe(dest('src/js'))
   .pipe(browserSync.stream())
 }
