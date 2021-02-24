@@ -58,7 +58,7 @@ function scripts() {
     plugins: [["@babel/plugin-proposal-class-properties"], ["remove-use-strict"]]
   }))
   .pipe(concat('main.min.js'))
-  .pipe(uglify())
+  //.pipe(uglify())
   .pipe(dest('src/js'))
   .pipe(browserSync.stream())
 }

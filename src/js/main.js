@@ -1,4 +1,4 @@
-let wow = new WOW(
+const wow = new WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
@@ -13,35 +13,13 @@ let wow = new WOW(
   }
 );
 
-let myModal = new Modal({
+const myModal = new Modal({
   linkAttributeName: 'data-modal', 
 });
-
-// const swiper = new Swiper('.swiper-container', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
 
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 30,
-  //loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   //disableOnInteraction: false,
-  // },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -52,7 +30,14 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
-let tabVideo = new VideoTab({
+const videoIframe = new VideoBlock({
+  videoBlock: '.video__block',
+  videoLink: '.video__link',
+  titleVideoBlock: '.video__header',
+  playButton: '.video__button'
+})
+
+const tabVideo = new VideoTab({
   videoTabAttribute: '.tab__video',
   videoLinkAttribute: '.video__link',
   tabMediaAttribute: '.video__img',
