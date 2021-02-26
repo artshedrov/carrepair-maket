@@ -5,6 +5,9 @@
   @media (min-width: 1920px) {
     max-width: 1368px;
   }
+  @media (max-width: 1024px) {
+    max-width: 900px;
+  }
 }
 
 .section__img {
@@ -19,6 +22,9 @@
     font-size: @section-header-text-size;
     line-height: 42px;
     word-break: break-word;
+    @media(max-width: @ipadPro) {
+      font-size: 32px;
+    }
     &--white {
       color: @section-header-text-color-white;
     }

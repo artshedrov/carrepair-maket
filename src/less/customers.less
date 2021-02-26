@@ -15,10 +15,17 @@
     margin: 0 24px;
     width: 30%;
     flex: 0 0 300px;
+    @media(max-width: @ipadPro) {
+      flex: 0 1 300px;
+      margin: 12px;
+    }
     &__text {
       margin: 0;
       text-align: left;
       padding: 40px 40px 18px 40px;
+      @media(max-width: @ipadPro) {
+        padding: 20px 20px 18px; 
+      }
     }
   }
   &__container {
