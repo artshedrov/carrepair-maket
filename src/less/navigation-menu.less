@@ -12,14 +12,23 @@
     flex-direction: row;
     list-style: none;
     margin: 0;
+    @media(max-width: @ipadPro) {
+      padding-left: 30px;
+    }
   }
   &__item {
     position: relative;
     padding: 20px 0;
     transition-duration: 0.5s;
+    @media(max-width: @ipadPro) {
+      padding: 15px 0;
+    }
   }
   &__item + &__item {
     margin-left: 37px;
+    @media(max-width: @ipadPro) {
+      margin-left: 25px;
+    }
   }
   &__link {
     color: @text-secondary-color-default;

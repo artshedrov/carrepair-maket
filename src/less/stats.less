@@ -2,25 +2,47 @@
   .stats-var();
   background: @stats-bg;
   padding-bottom: 200px;
+  @media(max-width: @ipad) {
+    padding-bottom: 150px;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
     padding-top: 100px;
     height: 300px;
+    @media(max-width: @ipad) {
+      padding-top: 27px;
+    }
   }
   &__header {
     color: @stats-header-text-color;
+    padding: 5px;
   }
   &__img {
     position: relative;
     top: -150px;
     width: 498px;
-    height: 315px;
+    height: 287px;
+    background-size: cover;
+    overflow: hidden;
+    @media(max-width: @ipad) {
+      top: -80px;
+      width: 400px;
+      height: 185px; 
+    }
+    img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+    }
   }
   &__panel {
     padding-top: 80px;
     display: flex;
     justify-content: space-between;
+    @media(max-width: @ipad) {
+      padding: 10px;
+    }
   }
   &__block {
     display: flex;
@@ -38,6 +60,9 @@
     line-height: 42px;
     margin: 0;
     font-weight: bold;
+    @media(max-width: @ipad) {
+      font-size: 24px;
+    }
   }
   &__text {
     font-size: @stats-count-description-text-size;

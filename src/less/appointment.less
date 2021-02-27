@@ -32,6 +32,10 @@
   min-width: 585px;
   padding: 10px;
   width: 50%;
+  @media(max-width: @ipad) {
+    min-width: 380px;
+    width: 65%;
+  }
   &__header {
     text-align: center;
   }
@@ -54,6 +58,9 @@
     border: none;
     width: 100%;
     padding: 20px;
+    @media(max-width: @ipad) {
+      padding: 10px;
+    } 
     &:focus {
       outline: 1px solid @form-focus-color;
       box-shadow: 2px 0 5px @form-focus-color;
@@ -85,11 +92,10 @@
   }
   & > * {
     padding: 2em 2em;
+    @media(max-width: @ipad) {
+      padding: 1em;
+    } 
   }
-}
-
-.appointment__button {
-  //min-width: 100%;
 }
 
 .stat {
@@ -100,6 +106,9 @@
   align-items: center;
   width: 50%;
   flex-wrap: wrap;
+  @media(max-width: @ipad) {
+    padding: 100px 0 0 20px;
+  }
   &__header {
     font-size: @stat-header-text-size;
     color: @stat-header-text-color;
