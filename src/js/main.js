@@ -45,3 +45,37 @@ const tabVideo = new VideoTab({
 });
 
 wow.init();
+
+window.onresize = moveElement;
+window.onload = moveElement;
+
+// function wrap(el, wrapper) {
+//   el.parentNode.insertBefore(wrapper, el);
+//   wrapper.appendChild(el);
+// }
+
+function moveElement(event) {
+  let headerLogo = document.getElementById('logo');
+  let menuContainer = document.querySelector('.menu__container');
+  let navBar = document.getElementById('navbar');
+  let utilityGroup = document.querySelector('.utility__group');
+  let utilityButton = document.querySelector('.button__utility');
+  let utilityBlock = document.querySelector('.utility');
+
+
+  if(window.outerWidth < 760) {
+    if (headerLogo.parentNode.id === 'topnav') {
+      navBar.prepend(headerLogo);
+      if (navBar.parentNode.id === 'container-navbar') {
+        document.getElementById('header').prepend(navBar);
+        menuContainer.append(utilityBlock);
+        //utilityButton.remove();
+      }  
+    }
+    return; 
+  } else {
+    document.getElementById('topnav').prepend(headerLogo);
+    document.getElementById('container-navbar').append(navBar);
+    document.getElementById('topnav').append(utilityBlock);
+  }
+}

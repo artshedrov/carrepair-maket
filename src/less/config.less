@@ -13,14 +13,12 @@
 
 @glob-img-header: url("../img/Heroshot3.png");
 @glob-logo-header: url("../img/Logo-Placeholder-5.png");
-
 @glob-about-img-bg: url("../img/about-image.png");
-
 @glob-video-bg: url("../img/video-bg.png");
 
 @glob-text-size-count: 96px;
 @glob-text-size-h1: 56px;
-@glob-text-size-h2: 42px;
+@glob-text-size-h2: 42px; 
 @glob-text-size-h3: 36px;
 @glob-text-size-h4: 30px;
 @glob-text-size-h5: 24px;
@@ -33,6 +31,7 @@
 //media query
 @ipadPro: 1360px;
 @ipad: 920px;
+@smartphone: 760px;
 
 .body-default() {
   @body-bg-color: @glob-body-color;
@@ -133,4 +132,8 @@
   @footer-copyright-bg-color: @glob-secondary-color;
   @footer-copyright-text-color: @glob-color-neutral-gray;
   @footer-block-text-size: @glob-text-size-nav;
+}
+
+.mobile-menu-var () {
+  @button-color-menu: @glob-color-neutral-gray;
 }
