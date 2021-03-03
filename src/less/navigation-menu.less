@@ -16,13 +16,15 @@
     @media(max-width: @smartphone) {
       position: fixed;
       top: 0;
-      right: 0%;
+      right: 120%;
       width: 100%;
       height: 100%;
       background: @nav-bg;
-      opacity: .99;
       z-index: 3;
       transition: all .3s ease 0s;
+    }
+    &--active {
+      right: 0;
     }
   }
   &__list {

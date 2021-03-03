@@ -49,27 +49,21 @@ wow.init();
 window.onresize = moveElement;
 window.onload = moveElement;
 
-// function wrap(el, wrapper) {
-//   el.parentNode.insertBefore(wrapper, el);
-//   wrapper.appendChild(el);
-// }
-
 function moveElement(event) {
-  let headerLogo = document.getElementById('logo');
-  let menuContainer = document.querySelector('.menu__container');
-  let navBar = document.getElementById('navbar');
-  let utilityGroup = document.querySelector('.utility__group');
-  let utilityButton = document.querySelector('.button__utility');
-  let utilityBlock = document.querySelector('.utility');
+  const headerLogo = document.getElementById('logo');
+  const menuContainer = document.querySelector('.menu__container');
+  const navBar = document.getElementById('navbar');
+  const utilityBlock = document.querySelector('.utility');
+  const mobileMenuBtn = document.querySelector('.mobile-menu');
 
 
   if(window.outerWidth < 760) {
     if (headerLogo.parentNode.id === 'topnav') {
       navBar.prepend(headerLogo);
+      navBar.prepend(mobileMenuBtn);
       if (navBar.parentNode.id === 'container-navbar') {
         document.getElementById('header').prepend(navBar);
         menuContainer.append(utilityBlock);
-        //utilityButton.remove();
       }  
     }
     return; 
@@ -79,3 +73,13 @@ function moveElement(event) {
     document.getElementById('topnav').append(utilityBlock);
   }
 }
+
+const mobileMenu = document.querySelector('.mobile-menu');
+const navContainer = document.querySelector('.menu__container');
+const mobileMenuBtn = document.querySelector('.mobile-menu__line');
+
+mobileMenu.addEventListener('click', () => {
+  navContainer.classList.toggle('menu__container--active');
+  mobileMenuBtn.classList.toggle('mobile-menu__line--active');
+  mobileMenu.classList.toggle('mobile-menu--opened');
+});
