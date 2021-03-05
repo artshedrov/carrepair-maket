@@ -23,6 +23,11 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 130px;
+    @media(max-width: @smartphone-big) {
+      flex-direction: column;
+      padding-top: 30px;
+      align-items: center;
+    }
   }
 }
 
@@ -35,6 +40,10 @@
   @media(max-width: @ipad) {
     min-width: 380px;
     width: 65%;
+  }
+  @media(max-width: @smartphone-big) {
+    order: 2;
+    min-width: 480px;
   }
   &__header {
     text-align: center;
@@ -108,6 +117,9 @@
   flex-wrap: wrap;
   @media(max-width: @ipad) {
     padding: 100px 0 0 20px;
+  }
+  @media(max-width: @smartphone-big) {
+    padding: 0;
   }
   &__header {
     font-size: @stat-header-text-size;

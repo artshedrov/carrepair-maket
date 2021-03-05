@@ -7,6 +7,9 @@
   @media(max-width: @ipad) {
     background-position: right;
   }
+  @media(max-width: @smartphone-big) {
+    height: 500px;
+  }
   &__inner {
     display: flex;
     flex-direction: column;
@@ -21,12 +24,23 @@
     @media(max-width: @ipadPro) {
       padding-right: 300px;
     }
+    @media(max-width: @smartphone-big) {
+      font-size: @text-sm-big-h1;
+      padding-right: 100px;
+      padding-bottom: 28px;
+    }
   }
 }
 
 .logo {
+  .header-var();
   @media(max-width: @smartphone) {
     flex: 1; 
+  }
+  &__text {
+    @media(max-width: @smartphone) {
+      fill: @fill-blue;
+    }
   }
 }
 
