@@ -1,13 +1,9 @@
-@glob-primary-text-color: #fff;
-@glob-secondary-text-color: #C40B0B;
-@glob-secondary-color: #02133C;
-@glob-btn-color-primary: #C40B0B;
-@glob-btn-color-secondary: #E30B0B;
-@glob-text-color-light: #4B4B4B;
-@glob-fill-svg: #C40B0B;
+@glob-color-primary: #C40B0B;
+@glob-color-secondary: #02133C;
+@glob-color-third:#E30B0B;
 @glob-color-neutral: #fff;
+@glob-text-color-light: #4B4B4B;
 @glob-body-color: #F5F5F5;
-@glob-section-white-bg: #fff;
 @glob-color-neutral-gray: #959595;
 @glob-color-gray: #D5D5D5;
 
@@ -39,21 +35,21 @@
 }
 
 .buttons() {
-  @text-color: @glob-primary-text-color;
-  @bg-btn-color-primary: @glob-btn-color-primary;
-  @bg-btn-color-second: @glob-btn-color-secondary;
+  @text-color: @glob-color-neutral;
+  @bg-btn-color-primary: @glob-color-primary;
+  @bg-btn-color-second: @glob-color-third;
   @bg-btn-color-white: @glob-color-neutral;
   @text-size: @glob-text-size-cap;
-  @fill-default: @glob-fill-svg;
+  @fill-default: @glob-color-primary;
 } 
 
 .header-var() {
   @bg-header-image: @glob-img-header;
   @logo-image: @glob-logo-header;
-  @fill-default: @glob-fill-svg;
-  @fill-blue: @glob-secondary-color;
-  @text-primary-color-default: @glob-primary-text-color;
-  @text-secondary-color-default: @glob-secondary-color;
+  @fill-default: @glob-color-primary;
+  @fill-blue: @glob-color-secondary;
+  @text-primary-color-default: @glob-color-neutral;
+  @text-secondary-color-default: @glob-color-secondary;
   @text-size-h1: @glob-text-size-h1;
   @text-sm-big-h1: @glob-text-size-h2;
   @text-size-nav: @glob-text-size-nav;
@@ -64,19 +60,19 @@
 .section-var() {
   @section-text-size-header-overline: @glob-text-size-cap;
   @section-title-color: @glob-text-color-light;
-  @section-header-text-color-white: @glob-primary-text-color;
-  @section-header-text-color: @glob-secondary-color;
+  @section-header-text-color-white: @glob-color-neutral;
+  @section-header-text-color: @glob-color-secondary;
   @section-header-text-size: @glob-text-size-h3;
   @section-overline-gray-text-color: @glob-color-gray;
 }
 .about-section() {
-  @about-bg: @glob-section-white-bg;
+  @about-bg: @glob-color-neutral;
   @about-img-bg: @glob-about-img-bg;
-  @about-text-color: @glob-secondary-color;
+  @about-text-color: @glob-color-secondary;
 }
 .feature-var() {
   @feature-title-text-size: @glob-text-size-h6;
-  @feature-title-text-color: @glob-secondary-color;
+  @feature-title-text-color: @glob-color-secondary;
 }
 .video-section() {
   @video-img-bg: @glob-video-bg;
@@ -90,35 +86,35 @@
   @form-placeholder-text-size: @glob-text-size-body;
   @form-placeholder-text-color: @glob-color-neutral-gray;
   @form-field-color: @glob-body-color;
-  @form-focus-color: @glob-btn-color-primary;
-  @appointment-bg-color: @glob-secondary-color;
-  @form-bg-color: @glob-primary-text-color;
+  @form-focus-color: @glob-color-primary;
+  @appointment-bg-color: @glob-color-secondary;
+  @form-bg-color: @glob-color-neutral;
   @stat-header-text-size: @glob-text-size-h4;
   @stat-header-text-color: @glob-color-neutral;
-  @stat-count-text-color: @glob-secondary-text-color;
+  @stat-count-text-color: @glob-color-primary;
   @stat-count-text-size: @glob-text-size-count;
   @stat-count-description-text-size: @glob-text-size-h6;
   @stat-count-description-text-color: @glob-color-neutral;
 }
 
 .gallery-section() {
-  @gallery-bg: @glob-section-white-bg;
+  @gallery-bg: @glob-color-neutral;
 }
 .tabs-var() {
-  @tab-bar-color-active: @glob-secondary-text-color;
-  @tab-btn-text-color: @glob-secondary-color;
+  @tab-bar-color-active: @glob-color-primary;
+  @tab-btn-text-color: @glob-color-secondary;
   @tab-btn-text-size: @glob-text-size-body;
 }
 
 .customers-var() {
   @customers-name-text-size: @glob-text-size-body;
-  @customers-name-text-color: @glob-secondary-color;
+  @customers-name-text-color: @glob-color-secondary;
 }
 
 .stats-var() {
-  @stats-bg: @glob-secondary-color;
+  @stats-bg: @glob-color-secondary;
   @stats-header-text-color: @glob-color-neutral;
-  @stats-count-text-color: @glob-secondary-text-color;
+  @stats-count-text-color: @glob-color-primary;
   @stats-count-description-text-color: @glob-body-color;
   @stats-count-text-size: @glob-text-size-h3;
   @stats-count-description-text-size: @glob-text-size-body; 
@@ -126,13 +122,13 @@
 
 .appointment-block-var() {
   @appointment-block-bg: @glob-color-neutral;
-  @appointment-block-header-text-color: @glob-secondary-color;
+  @appointment-block-header-text-color: @glob-color-secondary;
   @appointment-block-header-text-size: @glob-text-size-h5; 
 }
 
 .footer-var () {
   @footer-block-text-color: @glob-text-color-light;
-  @footer-copyright-bg-color: @glob-secondary-color;
+  @footer-copyright-bg-color: @glob-color-secondary;
   @footer-copyright-text-color: @glob-color-neutral-gray;
   @footer-block-text-size: @glob-text-size-nav;
 }
