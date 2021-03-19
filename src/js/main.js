@@ -13,10 +13,78 @@ const wow = new WOW(
   }
 );
 
+//счетчики
+const counterFromBlock = new Waypoint({
+  element: document.querySelector('.count-num'),
+  handler: function() {
+    new Counter({
+      element: '.count-num',
+      delay: 10,
+      duration: 2500
+    })
+    this.destroy();
+  },
+  offset: 'bottom-in-view',
+});
+
+const counterStatOil = new Waypoint({
+  element: document.querySelector('.stats-oil'),
+  handler: function() {
+    new Counter({
+      element: '.stats-oil',
+      delay: 10,
+      duration: 2500
+    })
+    this.destroy();
+  },
+  offset: 'bottom-in-view',
+});
+
+const counterStatTrans = new Waypoint({
+  element: document.querySelector('.stats-trans'),
+  handler: function() {
+    new Counter({
+      element: '.stats-trans',
+      delay: 10,
+      duration: 2500
+    })
+    this.destroy();
+  },
+  offset: 'bottom-in-view',
+});
+
+const counterStatAlign = new Waypoint({
+  element: document.querySelector('.stats-align'),
+  handler: function() {
+    new Counter({
+      element: '.stats-align',
+      delay: 10,
+      duration: 2500
+    })
+    this.destroy();
+  },
+  offset: 'bottom-in-view',
+});
+
+const counterStatEngine = new Waypoint({
+  element: document.querySelector('.stats-engine'),
+  handler: function() {
+    new Counter({
+      element: '.stats-engine',
+      delay: 10,
+      duration: 2500
+    })
+    this.destroy();
+  },
+  offset: 'bottom-in-view',
+});
+
+//модальное окно
 const myModal = new Modal({
   linkAttributeName: 'data-modal', 
 });
 
+//слайдер
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -30,6 +98,7 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
+//видео в видео блоке
 const videoIframe = new VideoBlock({
   videoBlock: '.video__block',
   videoLink: '.video__link',
@@ -37,6 +106,7 @@ const videoIframe = new VideoBlock({
   playButton: '.video__button'
 })
 
+//видео в табах
 const tabVideo = new VideoTab({
   videoTabAttribute: '.tab__video',
   videoLinkAttribute: '.video__link',

@@ -43,15 +43,14 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/wowjs/dist/wow.js',
+    'src/js/noframework.waypoints.js',
+    'src/js/counter.plugin.js',
     'src/js/swiper.js',
     'src/js/tabs-video.js',
     'src/js/video.js',
     'src/js/tabs.js',
     'src/js/modal.js',
-    'src/js/main.js',
-    'src/js/count.js',
-    'src/js/jquery.waypoints.js',
-    'src/js/jquery.counterup.js'
+    'src/js/main.js'
   ])
   .pipe(babel({
     presets: ["@babel/preset-env"], 
