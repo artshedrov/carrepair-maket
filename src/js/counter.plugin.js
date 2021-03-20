@@ -12,7 +12,7 @@ class Counter {
     this.config = Object.assign(defaultConfig, props);
     this.initCounter();
   }
-
+  
   initCounter = function() {
     let el = document.querySelector(this.config.element);
     let delayTime = this.config.delay;
@@ -37,12 +37,12 @@ class Counter {
     el.style.visibility = 'visible';
 
     const output = function() {
-      el.innerHTML = nums.shift()
+      el.innerHTML = nums.shift();
       if (nums.length) {
         clearTimeout(el.countUpTimeout)
-        el.countUpTimeout = setTimeout(output, delayTime)
+        el.countUpTimeout = setTimeout(output, delayTime);
       } else {
-        el._countUpOrigInnerHTML = undefined
+        el._countUpOrigInnerHTML = undefined;
       }
     }
     el.countUpTimeout = setTimeout(output, this.config.delay)  

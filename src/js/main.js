@@ -14,6 +14,7 @@ const wow = new WOW(
 );
 
 //счетчики
+
 const counterFromBlock = new Waypoint({
   element: document.querySelector('.count-num'),
   handler: function() {
@@ -125,7 +126,6 @@ function moveElement(event) {
   const navBar = document.getElementById('navbar');
   const utilityBlock = document.querySelector('.utility');
   const mobileMenuBtn = document.querySelector('.mobile-menu');
-
 
   if(window.outerWidth < 760) {
     if (headerLogo.parentNode.id === 'topnav') {
