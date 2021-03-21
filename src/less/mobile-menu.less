@@ -11,8 +11,25 @@
     z-index: 4;
     right: 10px;
   }
-  &--opened {
+  &__shadow {
     position: fixed;
+    border:none;
+    display: block;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden; 
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    background-color: black;
+    &--show {
+      pointer-events: auto;
+      opacity: 0.6;
+    }
   }
   &__line {
     position: relative;
@@ -40,18 +57,18 @@
       background-color: @button-color-menu;
       transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
     }
-    &--active {
-      background-color: transparent;
-      &::before {
-        transform: rotate(45deg);
-        top: 0;
-        transition: top 0.2s linear, transform 0.2 ease-in 0.2s;
-      }
-      &::after {
-        transform: rotate(-45deg);
-        top: 0;
-        transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-      }
-    }
+    // &--active {
+    //   background-color: transparent;
+    //   &::before {
+    //     transform: rotate(45deg);
+    //     top: 0;
+    //     transition: top 0.2s linear, transform 0.2 ease-in 0.2s;
+    //   }
+    //   &::after {
+    //     transform: rotate(-45deg);
+    //     top: 0;
+    //     transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    //   }
+    // }
   }
 }

@@ -119,37 +119,3 @@ wow.init();
 
 window.onresize = moveElement;
 window.onload = moveElement;
-
-function moveElement(event) {
-  const headerLogo = document.getElementById('logo');
-  const menuContainer = document.querySelector('.menu__container');
-  const navBar = document.getElementById('navbar');
-  const utilityBlock = document.querySelector('.utility');
-  const mobileMenuBtn = document.querySelector('.mobile-menu');
-
-  if(window.outerWidth < 760) {
-    if (headerLogo.parentNode.id === 'topnav') {
-      navBar.prepend(headerLogo);
-      navBar.prepend(mobileMenuBtn);
-      if (navBar.parentNode.id === 'container-navbar') {
-        document.getElementById('header').prepend(navBar);
-        menuContainer.append(utilityBlock);
-      }  
-    }
-    return; 
-  } else {
-    document.getElementById('topnav').prepend(headerLogo);
-    document.getElementById('container-navbar').append(navBar);
-    document.getElementById('topnav').append(utilityBlock);
-  }
-}
-
-const mobileMenu = document.querySelector('.mobile-menu');
-const navContainer = document.querySelector('.menu__container');
-const mobileMenuBtn = document.querySelector('.mobile-menu__line');
-
-mobileMenu.addEventListener('click', () => {
-  navContainer.classList.toggle('menu__container--active');
-  mobileMenuBtn.classList.toggle('mobile-menu__line--active');
-  mobileMenu.classList.toggle('mobile-menu--opened');
-});
