@@ -1,10 +1,3 @@
-.buttons() {
-	@bg-btn-color-primary: #4B4B4B;
-	@bg-btn-color-second: #000000;
-	@text-color: #fff;
-	@text-size: 16px;
-}
-
 .button {
 	.buttons();
 	display: inline-block;
@@ -14,7 +7,7 @@
 	background: @bg-btn-color-primary;
 	border: none;
 	color: @text-color;
-	transition: .2s;
+	//transition: .2s;
 	font-size: @text-size;
 	text-transform: uppercase;
 	min-width: 15em;
@@ -42,8 +35,8 @@
 		content: "";
 		font-size: @text-size;
 		text-align: center;
-		transition: .2s;
-		transform-origin: 50% 60%;
+		//transition: .2s;
+		//transform-origin: 50% 60%;
 		padding-left: 0.2em;
 	}
 	&:before {
@@ -77,17 +70,16 @@
 
 .play-button {
 	.buttons();
-	position: absolute;
-	padding: 0;
-	top: 50%;
-	left: 50%;
-	width: 85px;
-	height: 85px;
-	background-color: @bg-btn-color-white;
-	border-radius: 50%;
-	border: none;
-	cursor: pointer;
-	animation: pulsing 1s steps(16, end) infinite;
+	position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: @bg-btn-color-white;
+  border: none;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  animation: pulse-wave 2s linear infinite;
 	& svg {
 		margin-left: 5px;
 	}
@@ -105,75 +97,22 @@
 	}
 }
 
-// .pulsing {
-// 	width: 99%;
-// 	height: 99%;
-// 	border-radius: 50px;
-// 	z-index: 1;
-// 	position: absolute;
-
-// 	&:before,
-// 	&:after {
-// 		width: 100%;
-// 		height: 100%;
-// 		border: inherit;
-// 		top: 0;
-// 		left: 0;
-// 		z-index: 0;
-// 		background: #fff;
-// 		border-radius: inherit;
-// 		animation: pulsing 2.5s linear infinite;
-// 	}
-// 	&:after {
-// 		animation: pulsing1 2.5s linear infinite;
-// 	}
-// }
-
 @keyframes bounceright {
 	from { transform: translateX(0); }
 	to   { transform: translateX(3px); }
 }
 
-@keyframes pulsing {
-	0% {
-		opacity: 1;
-		transform: scaleY(1) scaleX(1);
+@keyframes pulse-wave {
+	0%{
+			box-shadow: 0 0 0 0 rgba(255, 255, 255, 1), 0 0 0 0 rgba(255, 255, 255, 0.5)
 	}
-	20% {
-		opacity: 1;
+	40%{
+			box-shadow: 0 0 0 70px rgba(201,8,95,0), 0 0 0 30px rgba(201,8,95,0)
 	}
-	50% {
-		opacity: 1;
-		transform: scaleY(1.4) scaleX(1.4);
+	80%{
+			box-shadow: 0 0 0 70px rgba(201,8,95,0), 0 0 0 30px rgba(201,8,95,0)
 	}
-	// 80% {
-	// 	opacity: 0.4;
-	// 	transform: scaleY(1.4) scaleX(1.4);
-	// }
-	// 90% {
-	// 	opacity: 0.9;
-	// 	transform: scaleY(1) scaleX(1);
-	// }
-}
-
-@keyframes pulsing1 {
-	0% {
-		opacity: 1;
-		transform: scaleY(1) scaleX(1);
+	100%{
+			box-shadow: 0 0 0 0 rgba(201,8,95,0), 0 0 0 40px rgba(201,8,95,0)
 	}
-	20% {
-		opacity: 0.5;
-	}
-	70% {
-		opacity: 0.2;
-		transform: scaleY(1.3) scaleX(1.15);
-	}
-	80% {
-		opacity: 0;
-		transform: scaleY(1.3) scaleX(1.15);
-	}
-	90% {
-		opacity: 0;
-		transform: scaleY(1) scaleX(1);
-	}
-}
+}	

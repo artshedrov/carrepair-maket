@@ -1,10 +1,14 @@
+const mobileMenu = document.querySelector('.mobile-menu');
+const navContainer = document.querySelector('.menu__container');
+const mobileMenuBtn = document.querySelector('.mobile-menu__line');
+const bodyContainer = document.querySelector('.body__container');
+
 function moveElement(event) {
   const headerLogo = document.getElementById('logo');
   const menuContainer = document.querySelector('.menu__container');
   const navBar = document.getElementById('navbar');
   const utilityBlock = document.querySelector('.utility');
   const mobileMenuBtn = document.querySelector('.mobile-menu');
-
 
   if(window.outerWidth < 760) {
     let menuShadow = document.createElement('div');
@@ -27,11 +31,6 @@ function moveElement(event) {
   }
 }
 
-const mobileMenu = document.querySelector('.mobile-menu');
-const navContainer = document.querySelector('.menu__container');
-const mobileMenuBtn = document.querySelector('.mobile-menu__line');
-const bodyContainer = document.querySelector('.body__container');
-
 mobileMenu.addEventListener('click', () => {
   const mobileShadow = document.querySelector('.mobile-menu__shadow');
   navContainer.classList.toggle('menu__container--active');
@@ -39,7 +38,6 @@ mobileMenu.addEventListener('click', () => {
   mobileMenu.classList.toggle('mobile-menu--opened');
   mobileShadow.classList.toggle('mobile-menu__shadow--show');
 });
-
 
 document.addEventListener('click', function(e) {
   const activeMenuShadow = e.target.classList.contains('mobile-menu__shadow--show');
