@@ -12,5 +12,14 @@ tabs.forEach(tab => {
     })
     tab.classList.add('tab__btn--active');
     target.classList.add('tab--active');
+    stopAllYouTubeVideos();
   });
 });
+
+let stopAllYouTubeVideos = () => { 
+  let iframes = document.querySelectorAll('iframe');
+  Array.prototype.forEach.call(iframes, iframe => { 
+    iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', 
+  func: 'pauseVideo' }), '*');
+ });
+}

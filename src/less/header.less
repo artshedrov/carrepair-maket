@@ -7,7 +7,7 @@
   @media(max-width: @ipad) {
     background-position: right;
   }
-  @media(max-width: @smartphone-big) {
+  @media(max-width: @smartphone) {
     height: 500px;
   }
   &__inner {
@@ -24,7 +24,7 @@
     @media(max-width: @ipadPro) {
       padding-right: 300px;
     }
-    @media(max-width: @smartphone-big) {
+    @media(max-width: @smartphone) {
       font-size: @text-sm-big-h1;
       padding-right: 100px;
       padding-bottom: 28px;
@@ -34,11 +34,12 @@
 
 .logo {
   .header-var();
-  @media(max-width: @smartphone) {
+  @media(max-width: @smartphone-big) {
     flex: 1; 
+    z-index: 4;
   }
   &__text {
-    @media(max-width: @smartphone) {
+    @media(max-width: @smartphone-big) {
       fill: @fill-blue;
     }
   }
@@ -59,7 +60,7 @@
     display: flex;
     align-items: flex-start;
     padding-left: 30px;
-    @media(max-width: @smartphone) {
+    @media(max-width: @smartphone-big) {
       margin-top: 100px;
       flex-direction: column;
     }
@@ -73,14 +74,14 @@
     margin-right: 10px;
     margin-bottom: 15px;
     fill: @fill-default;
-    @media(max-width: @smartphone) {
+    @media(max-width: @smartphone-big) {
       display: none;
     }
   }
   &__content {
     color: @text-primary-color-default;
     font-size: @text-size-util;
-    @media(max-width: @smartphone) {
+    @media(max-width: @smartphone-big) {
 
       color: @glob-color-neutral-gray;
       font-size: @text-size-nav;
@@ -89,10 +90,13 @@
   &__title {
     text-transform: uppercase;
   }
+  &--hidden {
+    display: none;
+  }
 }
 
 .button__utility {
-  @media(max-width: @smartphone) {
+  @media(max-width: @smartphone-big) {
     display: none;
   }
 }

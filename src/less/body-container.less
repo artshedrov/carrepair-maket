@@ -5,7 +5,10 @@
 .body__container {
   .body-default();
   background-color: @body-bg-color;
-  @media(max-width: @smartphone) {
+  @media(max-width: @smartphone-big) {
     margin: 0;
+  }
+  &--lock {
+    overflow: hidden;
   }
 }

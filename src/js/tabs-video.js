@@ -15,7 +15,7 @@ class VideoTab {
   initFindVideoTab() {
     let videos = document.querySelectorAll(this.config.videoTabAttribute);
     for (let i = 0; i < videos.length; i++) {
-      this.setupVideoTab(videos[i]);
+      this.setupVideoTab(videos[i]);  
     }
   }
 
@@ -29,7 +29,7 @@ class VideoTab {
       let iframe = this.createIframeTab(id);
       link.remove();
       button.remove();
-      video.appendChild(iframe);
+      video.appendChild(iframe);  
     });
     link.removeAttribute('href');
     video.classList.add('video--enabled');
@@ -50,12 +50,13 @@ class VideoTab {
     iframe.setAttribute('allow', 'autoplay');
     iframe.setAttribute('src', this.generateURLTab(id));
     iframe.classList.add('video__img');
+    iframe.setAttribute('id', 'video');
   
     return iframe;
   }
 
   generateURLTab(id) {
-    let query = '?rel=0&showinfo=0&autoplay=1';
+    let query = '?rel=0&showinfo=0&autoplay=1&enablejsapi=1&html5=1';
     return 'https://www.youtube.com/embed/' + id + query;
   }
 }

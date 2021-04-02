@@ -13,16 +13,17 @@
       height: 50px;
     }
   &__container {
-    @media(max-width: @smartphone) {
+    @media(max-width: @smartphone-big) {
       position: fixed;
       top: 0;
       padding-top: 50px;
-      z-index: -1;
+      z-index: 1;
       right: 120%;
       width: 100%;
       height: 100%;
       background: @nav-bg;
       transition: all .3s ease 0s;
+      overflow: scroll;
     }
     &--active {
       right: 50%;
@@ -38,12 +39,13 @@
     @media(max-width: @ipadPro) {
       padding-left: 30px;
     }
-    @media(max-width: @smartphone) {
+    @media(max-width: @smartphone-big) {
       padding-top: 30px;
       padding-left: 30px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      z-index: 1;
     }
   }
   &__item {
@@ -59,7 +61,7 @@
     @media(max-width: @ipadPro) {
       margin-left: 25px;
     }
-    @media(max-width: @smartphone) {
+    @media(max-width: @smartphone-big) {
       margin: 0;
     }
   }
@@ -69,7 +71,7 @@
     text-decoration: none;
     font-weight: bold;
     line-height: 22px;
-    @media(max-width: @smartphone) {
+    @media(max-width: @smartphone-big) {
       font-size: 24px;
     }
     &:hover,
@@ -86,6 +88,11 @@
     margin-bottom: 2px;
     margin-left: 10px;
     transition: all 0.5s ease;
+    &--active {
+      transform: rotate(-135deg);
+      margin-bottom: -2px;
+      transition: all 0.5s ease;
+    }
   }
   &__util {
     display: flex;
@@ -99,6 +106,7 @@
   background-color: @nav-bg;
   position: absolute;
   list-style: none;
+  text-align: left;
   left: 0;
   opacity: 0;
   padding: 10px;
@@ -111,6 +119,12 @@
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
   box-shadow: -1px 2px 5px -1px @fill-default;
+  @media (max-width: @smartphone-big) {
+    display: none;
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+  }
   :before {
     content: '\A';
     position: absolute;
@@ -119,7 +133,15 @@
     border-width: 10px 10px;
     border-style: solid;
     border-color: transparent transparent @fill-default;
+    @media (max-width: @smartphone-big) {
+      display: none;
     }
+  }
+  &--open {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
   }
   &__link {
     color: @text-secondary-color-default;
@@ -133,19 +155,17 @@
       color: @fill-default;
     }
   }
-  &__head {
-    &:hover {
-      .sub-menu__list {
-        visibility: visible;
-        opacity: 1; 
-      }
-      .menu__arrow {
-        transform: rotate(-135deg);
-        margin-bottom: -2px;
-        transition: all 0.5s ease;
-      }
-    }
-  }
+}
+
+body.mouse .menu__list>li:hover .sub-menu__list {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.mouse .menu__list>li:hover .menu__arrow {
+  transform: rotate(-135deg);
+  margin-bottom: -2px;
+  transition: all 0.5s ease;
 }
 
 @keyframes fadein {

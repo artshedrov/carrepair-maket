@@ -13,7 +13,11 @@ const browserSync = require('browser-sync').create();
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'src/'
+      baseDir: 'src/',
+      middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      } 
     }
   });
 }
