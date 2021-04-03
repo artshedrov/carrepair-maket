@@ -2,9 +2,16 @@
 	.section-var();
 	.services-var();
 	margin-bottom: 100px;
+	@media(max-width: @smartphone-albom) {
+		margin-bottom: 50px;	
+	}
 	&__header {
 		padding-top: 100px;
 		padding-bottom: 70px;
+		@media(max-width: @smartphone-albom) {
+			padding-top: 60px;
+    	padding-bottom: 40px;	
+		}
 	}
 	&__block {
 		display: flex;
@@ -30,6 +37,11 @@
 			@media(max-width: @smartphone-big) {
 				font-size: 16px;	
 			}
+			@media(max-width: @smartphone-albom) {
+				font-size: 14px;
+				line-height: normal;
+				margin: 5px 0;
+			}
 		}
 		&__text {
 			text-align: center;
@@ -43,12 +55,20 @@
 				font-size: 14px;
 				margin: 10px 20px;	
 			}
+			@media(max-width: @smartphone-albom) {
+				font-size: 12px;
+    		margin: 5px 6px;
+				line-height: normal;	
+			}
 		}
 		&__image {
 			margin: 50px 130px 15px 130px;
 			@media(max-width: @smartphone-big) {
 				margin: 15px 30px;
 				width: 20%;
+			}
+			@media(max-width: @smartphone-albom) {
+				width: 15%;
 			}
 		}
 		&:hover {

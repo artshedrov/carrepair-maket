@@ -11,6 +11,12 @@
       color: @footer-block-text-color;
       line-height: 22px;
       letter-spacing: 0.15px;
+      @media (max-width: @smartphone) {
+        font-size: 10px; 
+      }
+      @media (max-width: @smartphone-albom) {
+        line-height: normal;
+      }
     }
     a + a {
       margin-left: 18px;
@@ -24,6 +30,12 @@
       font-size: @footer-block-text-size;
       line-height: 22px;
       letter-spacing: 0.15px;
+      @media (max-width: @smartphone) {
+        font-size: 12px; 
+      }
+      @media (max-width: @smartphone-albom) {
+        font-size: 8px; 
+      }
     }
     &__list {
       list-style: none;
@@ -39,25 +51,68 @@
       font-size: @footer-block-text-size;
       line-height: 22px;
       letter-spacing: 0.15px;
+      @media (max-width: @smartphone-albom) {
+        line-height: 12px;
+        font-size: 10px; 
+      }
     }
   } 
   &__contacts {
+    &__title {
+      font-size: 16px;
+      @media (max-width: @smartphone-albom) {
+        font-size: 12px;
+      }
+    }
     &__item {
       display: flex;
+      align-items: center;
       img {
         margin-right: 18px;
+        width: 10%;
+        height: 10%;
+        @media (max-width: @smartphone-albom) {
+          margin-right: 10px;
+          width: 5%;
+          height: 5%;
+        }
       }
       p {
         color: @footer-block-text-color;
         font-size: @footer-block-text-size;
         line-height: 20px;
         letter-spacing: 0.15px;
+        @media (max-width: @smartphone) {
+          font-size: 10px; 
+          line-height: 10px;
+        }
+        @media (max-width: @smartphone-albom) {
+          font-size: 8px; 
+          line-height: 6px;
+        }
+      }
+    }
+  }
+  &__social {
+    img {
+      width: 10%;
+      height: 10%;
+      @media (max-width: @smartphone) {
+        width: 10%;
+        height: 10%;
+      }
+      @media (max-width: @smartphone-albom) {
+        width: 8%;
+        height: 8%;
       }
     }
   }
   &__copyright {
     background: @footer-copyright-bg-color;
     margin-top: 90px;
+    @media (max-width: @smartphone) {
+      margin-top: 25px; 
+    }
     &__container {
       display: flex;
       justify-content: space-between;
@@ -67,9 +122,18 @@
       line-height: 18px;
       letter-spacing: 0.15px;
       color: @footer-copyright-text-color;
+      @media (max-width: @smartphone-albom) {
+        font-size: 8px;
+      }
     }
     span {
       font-weight: bold;
     }
+  }
+}
+
+.logo__footer {
+  svg {
+    width: 100px;
   }
 }

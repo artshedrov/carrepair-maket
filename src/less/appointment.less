@@ -44,6 +44,11 @@
   @media(max-width: @smartphone-big) {
     order: 2;
     min-width: 480px;
+    min-width: 460px;
+  }
+  @media(max-width: @smartphone-albom) {
+    order: 2;
+    min-width: 460px;
   }
   &__header {
     text-align: center;
@@ -84,6 +89,9 @@
       line-height: 24px;
       letter-spacing: 0.15px;
       color: @form-placeholder-text-color;
+      @media(max-width: @smartphone-albom) {
+        font-size: 10px;
+      }
     }
   }
   &--font-format {
@@ -130,6 +138,11 @@
     text-align: center;
     padding: 5px;
     word-break: break-word;
+    @media(max-width: @smartphone-albom) {
+      font-size: 20px;
+      line-height: normal;
+      margin-bottom: 5px;
+    }
   }
   &__count {
     display: flex;
@@ -139,10 +152,19 @@
     font-weight: 900;
     line-height: 56px;
     text-align: center;
+    @media(max-width: @smartphone-albom) {
+      font-size: 70px;
+      margin: 10px 0 12px 0;
+    }
   }
   &__count-descrition {
     font-size: @stat-count-description-text-size;
     color: @stat-count-description-text-color;
     margin-top: 22px;
+    @media(max-width: @smartphone-albom) {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 16px;
+    }
   }
 }

@@ -13,6 +13,9 @@
     @media(max-width: @ipad) {
       padding-top: 27px;
     }
+    @media(max-width: @smartphone-albom) {
+      height: 250px; 
+    }
   }
   &__header {
     color: @stats-header-text-color;
@@ -29,6 +32,11 @@
       top: -80px;
       width: 400px;
       height: 185px; 
+    }
+    @media(max-width: @smartphone-albom) {
+      top: -80px;
+      width: 346px;
+      height: 146px; 
     }
     img {
       height: 100%;
@@ -52,6 +60,9 @@
       @media(max-width: @smartphone-big) {
         width: 25%;
       }
+      @media(max-width: @smartphone-albom) {
+        width: 15%;
+      }
     }
     &__info {
       margin-left: 6px;
@@ -66,10 +77,17 @@
     @media(max-width: @ipad) {
       font-size: 24px;
     }
+    @media(max-width: @smartphone-albom) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
   &__text {
     font-size: @stats-count-description-text-size;
     color: @stats-count-description-text-color;
     margin: 0;
+    @media(max-width: @smartphone-albom) {
+      font-size: 10px;
+    }
   }
 }

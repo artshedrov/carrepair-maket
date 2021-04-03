@@ -24,17 +24,27 @@
 		@media(max-width: @smartphone-big) {
 			font-size: 16px;	
 		}
+		@media(max-width: @smartphone-albom) {
+			font-size: 12px;
+			line-height: normal;	
+		}
 	}
 	&__text {
 		padding: 5px 5px;
 		@media(max-width: @smartphone-big) {
 			font-size: 12px;
 		}
+		@media(max-width: @smartphone-albom) {
+			font-size: 10px;
+		}
 	}
 	&__image {
 		margin-right: 20px;
 		@media(max-width: @smartphone-big) {
 			width: 20%;
+		}
+		@media(max-width: @smartphone-albom) {
+			width: 15%;
 		}
 	}
 }
