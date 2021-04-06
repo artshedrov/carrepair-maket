@@ -2,6 +2,8 @@
   position: relative;
   display: flex;
   margin-right: 20px;
+  cursor: pointer;
+  align-items: center;
   &__input {
     border-color: transparent !important;
     background-color: initial !important;
@@ -11,9 +13,14 @@
   }
   &__icon {
     margin-right: 5px;
+    width: 70%;
+    height: 70%;
   }
   &:hover > &__input {
     width: 100px;
+    @media(max-width: @smartphone-big) {
+      width: 0px;
+    }
   }
 }
 

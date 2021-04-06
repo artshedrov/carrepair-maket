@@ -1,3 +1,4 @@
+//активация анимаций при скролле
 const wow = new WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
@@ -12,6 +13,8 @@ const wow = new WOW(
     scrollContainer: null // optional scroll container selector, otherwise use window
   }
 );
+
+wow.init();
 
 //счетчики
 
@@ -85,7 +88,7 @@ const myModal = new Modal({
   linkAttributeName: 'data-modal', 
 });
 
-//слайдер
+//слайдер в блоке с табами
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -115,7 +118,6 @@ const tabVideo = new VideoTab({
   playButtonAttribute: '.play-button'
 });
 
-wow.init();
-
+//активация мобильного меню при =< 760px
 window.onresize = moveElement;
 window.onload = moveElement;
