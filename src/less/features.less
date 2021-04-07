@@ -4,6 +4,13 @@
 	@media(max-width: 420px) {
 		margin-bottom: 50px;		
 	}
+	&__content {
+		@media(max-width: @smartphone-albom) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 	&__header{
 		padding-bottom: 60px;
 	}
@@ -14,6 +21,10 @@
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
+		@media(max-width: @smartphone-albom) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__block + &__block {
 		margin-left: 24px;
@@ -29,7 +40,11 @@
 		}
 		@media(max-width: @smartphone-albom) {
 			font-size: 12px;
-			line-height: normal;	
+			line-height: normal;
+			padding: 5px;	
+		}
+		@media(max-width: @smartphone-mid) {
+			font-size: 10px;
 		}
 	}
 	&__text {

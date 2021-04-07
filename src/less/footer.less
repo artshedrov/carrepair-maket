@@ -3,9 +3,20 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    @media (max-width: @smartphone-extra) {
+      flex-direction: column;
+    }
   }
   &__block {
     width: 25%;
+    @media (max-width: @smartphone-extra) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 360px) {
+      flex: 1 0 30%;
+      margin-right: 10px;
+    }
     &__text {
       font-size: @footer-block-text-size;
       color: @footer-block-text-color;
@@ -14,7 +25,14 @@
       @media (max-width: @smartphone) {
         font-size: 10px; 
       }
+      @media (max-width: @smartphone-extra) {
+        font-size: 16px;
+      }
       @media (max-width: @smartphone-albom) {
+        line-height: normal;
+      }
+      @media (max-width: 360px) {
+        font-size: 16px;
         line-height: normal;
       }
     }
@@ -22,7 +40,18 @@
       margin-left: 18px;
     }
   }
+  &__group {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: @smartphone-extra) {
+      margin-bottom: 20px;
+    }
+  }
   &__links {
+    margin-right: 35px;
+    @media (max-width: @ipad) {
+      margin-right: 10px;
+    }
     &__title {
       color: @footer-block-text-color;
       text-transform: uppercase;
@@ -35,6 +64,13 @@
       }
       @media (max-width: @smartphone-albom) {
         font-size: 8px; 
+      }
+      @media (max-width: @smartphone-extra) {
+        font-size: 16px;
+      }
+      @media (max-width: 360px) {
+        font-size: 12px;
+        line-height: 12px; 
       }
     }
     &__list {
@@ -55,14 +91,32 @@
         line-height: 12px;
         font-size: 10px; 
       }
+      @media (max-width: @smartphone-extra) {
+        font-size: 16px;
+      }
     }
-  } 
+  }
+  &__links + &__links {
+    @media (max-width: @smartphone-extra) {
+      margin-left: 42px; 
+    }
+  }
   &__contacts {
+    @media (max-width: 360px) {
+      flex: 2 2 40%;
+    }
     &__title {
       font-size: 16px;
       @media (max-width: @smartphone-albom) {
         font-size: 12px;
       }
+      @media (max-width: @smartphone-extra) {
+        font-size: 16px; 
+      }
+      @media (max-width: 360px) {
+        font-size: 12px;
+        margin: 10px;
+      } 
     }
     &__item {
       display: flex;
@@ -89,6 +143,12 @@
         @media (max-width: @smartphone-albom) {
           font-size: 8px; 
           line-height: 6px;
+        }
+        @media (max-width: @smartphone-extra) {
+          font-size: 16px; 
+        }
+        @media (max-width: 360px) {
+          font-size: 12px;
         }
       }
     }
@@ -135,5 +195,11 @@
 .logo__footer {
   svg {
     width: 100px;
+    @media (max-width: @smartphone-extra) {
+      width: 200px;
+    }
+    @media (max-width: 360px) {
+      width: 100px;
+    }
   }
 }

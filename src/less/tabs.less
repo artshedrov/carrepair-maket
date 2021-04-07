@@ -69,12 +69,14 @@
 			font-size: 8px;
 		}
 		@media (max-width: 455px) {
-			margin-right: 5px;	
+			margin-right: 40px;	
 			font-size: 6px;
 		}
 		@media (max-width: @smartphone-mid) {
 			margin-right: 5px;	
-			font-size: 8px;
+			font-size: 7px;
+			line-height: 15px;
+			padding-bottom: 8px;
 		}
 		&--active {
 			background-color: white;
@@ -83,9 +85,6 @@
 		}
 		&:hover {
 			opacity: 0.6;
-		}
-		@media (max-width: 415px) {
-			font-size: 8px;
 		}
 	}
 	&__btn:last-child {
@@ -104,8 +103,8 @@
 
 .tab--active[data-tab-content] {
 	display: flex;
-	@media (max-width: 415px) {
-		flex-direction: column;
-		align-items: center;
-	}
+	// @media (max-width: 415px) {
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// }
 }

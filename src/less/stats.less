@@ -16,6 +16,9 @@
     @media(max-width: @smartphone-albom) {
       height: 250px; 
     }
+    @media(max-width: 360px) {
+      height: 200px; 
+    }
   }
   &__header {
     color: @stats-header-text-color;
@@ -60,6 +63,10 @@
   &__block {
     display: flex;
     flex-direction: row;
+    @media(max-width: @smartphone-extra) {
+      align-items: initial;
+      max-height: 40px;
+    }
     &__img {
       margin-right: 6px;
       @media(max-width: @smartphone-big) {
@@ -86,6 +93,10 @@
       font-size: 16px;
       line-height: 20px;
     }
+    @media(max-width: @smartphone-mid) {
+      font-size: 12px;
+      line-height: 12px;
+    }
   }
   &__text {
     font-size: @stats-count-description-text-size;
@@ -93,6 +104,12 @@
     margin: 0;
     @media(max-width: @smartphone-albom) {
       font-size: 10px;
+    }
+    @media(max-width: @smartphone-extra) {
+      font-size: 10px;
+    }
+    @media(max-width: @smartphone-mid) {
+      font-size: 8px;
     }
   }
 }

@@ -7,7 +7,6 @@
 	background: @bg-btn-color-primary;
 	border: none;
 	color: @text-color;
-	//transition: .2s;
 	font-size: @text-size;
 	text-transform: uppercase;
 	min-width: 15em;
@@ -26,9 +25,15 @@
 		@media(max-width: @smartphone-albom) {
 			margin-right: 30px;	
 		}
+		@media(max-width: @smartphone-extra) {
+			margin-right: 0;	
+		}
 	}
 	&--appointment {
 		min-width: 17em;
+		@media(max-width: @smartphone-extra) {
+			margin: 20px 5px;	
+		}
 	}
 	&:before,
 	&:after {
@@ -42,8 +47,6 @@
 		content: "";
 		font-size: @text-size;
 		text-align: center;
-		//transition: .2s;
-		//transform-origin: 50% 60%;
 		padding-left: 0.2em;
 		@media(max-width: @smartphone-albom) {
 			padding-top: 14px;

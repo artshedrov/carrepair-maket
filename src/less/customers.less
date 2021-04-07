@@ -36,11 +36,17 @@
       @media(max-width: @ipadPro) {
         padding: 20px 20px 18px; 
       }
+      @media(max-width: 360px) {
+        padding: 10px 12px 5px; 
+      }
     }
   }
   &__container {
     display: flex;
     padding: 20px 40px 40px 18px;
+    @media(max-width: @smartphone-mid) {
+      padding: 10px 10px 10px 18px; 
+    }
   }
   &__img {
     background-size: cover;
@@ -50,6 +56,10 @@
     @media(max-width: @smartphone-mid) {
       width: 35px;
       height: 35px; 
+    }
+    @media(max-width: @smartphone-extra) {
+      width: 25px;
+      height: 25px; 
     }
   }
   &__name {
@@ -65,7 +75,7 @@
     }
     @media(max-width: @smartphone-mid) {
       font-size: 8px;
-      word-break: break-word;
+      word-break:initial;
     }
   }
 }
