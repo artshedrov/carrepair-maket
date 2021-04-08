@@ -88,6 +88,11 @@ const myModal = new Modal({
   linkAttributeName: 'data-modal', 
 });
 
+//модальное окно поиска
+const searchModal = new Modal({
+  linkAttributeName: 'data-modal-search'
+});
+
 //слайдер в блоке с табами
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,

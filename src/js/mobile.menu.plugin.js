@@ -41,6 +41,9 @@ function moveElement(event) {
   const menuContainer = document.querySelector('.menu__container');
   const navBar = document.getElementById('navbar');
   const utilityBlock = document.querySelector('.utility');
+  const search = document.querySelector('.search');
+  const searchIcon = document.querySelector('.search__icon');
+  const searchInput = document.querySelector('.search__input')
   const mobileMenuBtn = document.querySelector('.mobile-menu');
 
   if(window.outerWidth <= 760) {
@@ -55,10 +58,26 @@ function moveElement(event) {
         document.getElementById('header').prepend(navBar);
         utilityBlock.classList.add('utility--hidden');
         menuContainer.append(utilityBlock);
+        searchInput.classList.add('search__input--hide');
+        let wrapper = document.createElement('a');
+        wrapper.innerHTML = searchIcon.outerHTML;
+        wrapper.setAttribute('href', '#');
+        wrapper.classList.add('search__link');
+        wrapper.setAttribute('data-modal-search', '#SearchModal');
+        searchIcon.parentNode.replaceChild(wrapper,searchIcon);
       }  
     }
     return; 
   } else {
+    if (searchIcon.parentNode.className === 'search__link') {
+      let searchLink = document.querySelector('.search__link');
+      let searchBlock = searchLink.parentNode;
+      searchBlock.insertBefore(searchIcon, searchLink);
+      //search.parentNode.replaceChild(searchIcon, searchLink);
+      //document.querySelector('.search__link').remove();
+      searchInput.classList.remove('search__input--hide');
+      searchLink.remove();
+    }
     document.getElementById('topnav').prepend(headerLogo);
     document.getElementById('container-navbar').append(navBar);
     document.getElementById('topnav').append(utilityBlock);

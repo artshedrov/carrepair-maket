@@ -1,21 +1,6 @@
-.appointment-section() {
-  @appointment-bg-color: #D5D5D5;
-  @form-bg-color: #FFFFFF;
-  @form-field-color: #F5F5F5;
-  @form-focus-color: #4B4B4B;
-  @form-placeholder-text-color: #959595;
-  @form-placeholder-text-size: 16px;
-
-  @stat-header-text-color: #000000;
-  @stat-count-text-color: #000000;
-  @stat-count-description-text-color: #000000;
-  @stat-header-text-size: 30px;
-  @stat-count-text-size: 96px;
-  @stat-count-description-text-size: 19px;
-}
-
 .appointment {
   .appointment-section();
+  position: relative;
   background-color: @appointment-bg-color;
   padding-bottom: 200px;
   &__content {
@@ -37,6 +22,7 @@
   min-width: 585px;
   padding: 10px;
   width: 50%;
+  z-index: 2;
   @media(max-width: @ipad) {
     min-width: 380px;
     width: 65%;

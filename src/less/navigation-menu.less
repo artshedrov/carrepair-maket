@@ -47,6 +47,9 @@
       align-items: flex-start;
       z-index: 1;
     }
+    @media(max-width: @smartphone-mid) {
+      padding-left: 15px;
+    }
   }
   &__item {
     position: relative;
@@ -157,6 +160,9 @@
     &:hover,
     :focus-within {
       color: @fill-default;
+    }
+    @media(max-width: @smartphone-mid) {
+      font-size: 12px;
     }
   }
 }
